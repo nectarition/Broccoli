@@ -1,0 +1,3 @@
+[submodule "themes/anibis"]
+	path = themes/anibis
+	url = https://github.com/TinyKitten/hugo-theme-anubis
