@@ -3,11 +3,6 @@ label: post
 hide_body: false
 display_field: Title
 fields:
-- name: File_Name
-  type: text
-  config:
-    required: false
-  label: File Name
 - name: Title
   type: text
   config:
