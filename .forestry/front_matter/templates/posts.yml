@@ -1,13 +1,18 @@
 ---
-label: posts
-hide_body: true
+label: post
+hide_body: false
 fields:
-- name: contents
-  type: textarea
-  default: ''
+- name: Title
+  type: text
   config:
     required: false
-    wysiwyg: true
-    schema:
-      format: markdown
-  label: contents
+  label: title
+- name: Date
+  type: datetime
+  label: date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
