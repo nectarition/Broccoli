@@ -1,0 +1,5 @@
+{{ $styles := resources.Get "scss/main.scss" | resources.ToCSS }}
+<link rel="stylesheet" href=" {{ $styles.Permalink }} " />
+<title>
+  {{ if and (.Title) (not .IsHome) }}{{ .Title }} - {{ end }}{{ .Site.Title }}
+</title>

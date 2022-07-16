@@ -1,7 +1,7 @@
 baseURL: ''
 languageCode: 'ja-JP'
 title: 'Nectarition / ねくたりしょん'
-theme: 'anibis'
+theme: 'nectarition'
 
 params:
   author: 'Nectarition'
