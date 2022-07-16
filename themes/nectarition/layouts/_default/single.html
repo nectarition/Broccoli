@@ -1,7 +1,7 @@
 {{ define "main" }} {{ $isPosts := eq .Type "posts" }}
 <div class="meta">
   <ul class="breadcrumbs">
-    <li><a href="{{ .Site.BaseURL}}">ホーム</a></li>
+    <li><a href="{{ .Site.BaseURL | relLangURL}}">ホーム</a></li>
     <li>{{ .Title }}</li>
   </ul>
   <h1 class="noneGap">{{ .Title }}</h1>
