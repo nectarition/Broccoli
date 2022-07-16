@@ -7,15 +7,15 @@ fields:
   type: text
   config:
     required: false
-  label: file name
+  label: File Name
 - name: Title
   type: text
   config:
     required: false
-  label: title
+  label: Title
 - name: Date
   type: datetime
-  label: date
+  label: Date
   description: ''
   config:
     required: false
