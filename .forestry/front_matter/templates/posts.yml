@@ -1,4 +1,13 @@
 ---
 label: posts
 hide_body: true
-fields: []
+fields:
+- name: contents
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: contents
