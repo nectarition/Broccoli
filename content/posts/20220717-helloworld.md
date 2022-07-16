@@ -1,9 +1,9 @@
 +++
 Date = "2022-07-17T00:00:00+09:00"
 Title = "Nectarition Blog はじめました"
-date = ""
+date = 2022-07-16T15:00:00Z
 disableSummary = true
-title = ""
+title = "Nectarition Blog はじめました"
 
 +++
 おはようございます。Nectaritionの染宮です。
