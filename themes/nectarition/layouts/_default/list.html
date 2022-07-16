@@ -1,0 +1,15 @@
+{{ define "main" }} {{ $pages := where site.RegularPages "Type" "in"
+site.Params.mainSections }} {{ range $pages }}
+<a href="{{ .Permalink }}">
+  <article class="card">
+    <div class="cardTitle">{{ .Title }}</div>
+    <ul class="metaList">
+      <li>{{ .Params.date.Format "2006年01月02日 15時04分"}} 更新</li>
+    </ul>
+    <div class="cardDescription">
+      {{ if not .Site.Params.disableSummary }} {{ .Summary | safeHTML }} {{ end
+      }}
+    </div>
+  </article>
+</a>
+{{ end }} {{ end }}

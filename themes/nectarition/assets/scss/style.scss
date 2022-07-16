@@ -1,0 +1,114 @@
+@mixin mq {
+  @media screen and (max-width: 800px) {
+    @content;
+  }
+}
+
+html,
+body {
+  background-color: #ffffff;
+}
+
+header {
+  padding: 15px 20px;
+  background-color: #cc3355;
+  color: #ffffff;
+
+  .logo {
+    height: 20px;
+  }
+}
+
+.noneGap {
+  margin-bottom: 0;
+}
+
+.container {
+  min-width: 700px;
+  width: 50%;
+  margin: 20px auto;
+  padding-top: 0;
+
+  @include mq {
+    width: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    padding: 20px;
+    @include mq {
+      padding: 10px;
+    }
+  }
+
+  .meta {
+    margin-bottom: 10px;
+
+    &List,
+    .breadcrumbs {
+      list-style: none;
+      color: #808080;
+
+      li {
+        display: inline-block;
+      }
+    }
+
+    &List {
+      li:not(:first-child)::before {
+        content: ' / ';
+      }
+    }
+
+    .breadcrumbs {
+      padding: 10px;
+      background-color: #efefef;
+
+      li:not(:first-child)::before {
+        content: ' > ';
+      }
+    }
+  }
+}
+
+footer {
+  padding: 20px;
+}
+
+a {
+  color: #cc3355;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #cc3355;
+}
+
+.card {
+  padding: 10px;
+  border-bottom: 2px solid #cc3355;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: #efefef;
+  }
+
+  &Title {
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #404040;
+    background-color: #cc3355;
+    color: #ffffff;
+  }
+
+  &Description {
+    color: #808080;
+  }
+}
