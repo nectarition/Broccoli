@@ -11,5 +11,3 @@ fields:
     schema:
       format: markdown
   label: contents
-pages:
-- content/posts/kanzen.md
