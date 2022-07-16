@@ -38,7 +38,6 @@ h6 {
 ul {
   list-style: none;
   padding-left: 1em;
-
   li {
     &::before {
       content: '・';
@@ -71,6 +70,7 @@ ul {
 
     &List,
     .breadcrumbs {
+      margin: 0;
       padding: 0;
       list-style: none;
       color: #808080;
