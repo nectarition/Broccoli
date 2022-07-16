@@ -1,7 +1,0 @@
-baseURL = 'https://nectarition.jp/'
-languageCode = 'ja-JP'
-title = 'Nectarition / ねくたりしょん'
-theme = 'anibis'
-
-params.author = 'Nectarition'
-params.logo = '/system-images/logo.svg'

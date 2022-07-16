@@ -1,0 +1,8 @@
+baseURL: 'https://nectarition.jp/'
+languageCode: 'ja-JP'
+title: 'Nectarition / ねくたりしょん'
+theme: 'anibis'
+
+params:
+  author: 'Nectarition'
+  logo: '/system-images/logo.svg'
