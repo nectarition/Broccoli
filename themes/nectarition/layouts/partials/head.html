@@ -1,5 +1,21 @@
 {{ $styles := resources.Get "scss/main.scss" | resources.ToCSS }}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href=" {{ $styles.Permalink }} " />
+
+{{ hugo.Generator }} {{ $isPosts := eq .Type "posts" }} {{ if $isPosts }}
+<meta property="og:title" content="{{ .Title }}" />
+<meta
+  property="og:description"
+  content="{{ if not .Site.Params.disableSummary }} {{ .Summary | safeHTML }} {{ end
+}}"
+/>
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:image" content="" />
+<meta property="article:section" content="posts" />
+{{ end }}
+
 <title>
   {{ if and (.Title) (not .IsHome) }}{{ .Title }} - {{ end }}{{ .Site.Title }}
 </title>
