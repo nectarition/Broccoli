@@ -19,8 +19,31 @@ header {
   }
 }
 
-.noneGap {
-  margin-bottom: 0;
+footer {
+  padding: 20px;
+}
+
+a {
+  color: #cc3355;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #cc3355;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1em;
+
+  li {
+    &::before {
+      content: '・';
+    }
+  }
 }
 
 .container {
@@ -48,11 +71,15 @@ header {
 
     &List,
     .breadcrumbs {
+      padding: 0;
       list-style: none;
       color: #808080;
 
       li {
         display: inline-block;
+        &:first-child::before {
+          content: '';
+        }
       }
     }
 
@@ -73,20 +100,8 @@ header {
   }
 }
 
-footer {
-  padding: 20px;
-}
-
-a {
-  color: #cc3355;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #cc3355;
+.noneGap {
+  margin-bottom: 0;
 }
 
 .card {
