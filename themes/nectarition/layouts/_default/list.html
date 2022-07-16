@@ -1,5 +1,25 @@
-{{ define "main" }} {{ $pages := where site.RegularPages "Type" "in"
-site.Params.mainSections }} {{ range $pages }}
+{{ define "main" }}
+<h2>Nectaritionとは？</h2>
+<p>
+  ねいろの突発的な趣味を共有して、何か作ったり作らなかったり、貢献したりしなかったり、入ってても何のメリットも得られないサークル。
+</p>
+<h2>チーム活動紹介</h2>
+<ul>
+  <li>
+    <b>NCT-Blossom</b> 同人誌即売会イベント主催
+    <a target="_blank" href="https://twitter.com/nct_kohatabe">@nct_kohatabe</a>
+    /
+    <a target="_blank" href="https://kohatabe.jp">#コハタベ</a>
+    <a target="_blank" href="https://shiokazehs.jp">#しおばな祭</a>
+  </li>
+  <li>
+    <b>NCT-Cherrypick</b>
+    提携組織で使用している認証基盤やシステムインフラの整備、システム開発。
+  </li>
+</ul>
+<h2>Articles</h2>
+{{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }} {{
+range $pages }}
 <a href="{{ .Permalink }}">
   <article class="card">
     <div class="cardTitle">{{ .Title }}</div>

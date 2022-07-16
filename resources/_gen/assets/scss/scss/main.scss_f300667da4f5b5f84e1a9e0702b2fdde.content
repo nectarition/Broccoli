@@ -13,7 +13,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+ul {
   margin: 0;
   margin-bottom: 10px; }
   p:last-child,
@@ -22,11 +23,11 @@ h6 {
   h3:last-child,
   h4:last-child,
   h5:last-child,
-  h6:last-child {
+  h6:last-child,
+  ul:last-child {
     margin-bottom: 0; }
 
 ul {
-  margin: 0;
   padding: 0; }
 
 a {
@@ -83,6 +84,7 @@ ul {
     margin-bottom: 10px; }
     .container .metaList,
     .container .meta .breadcrumbs {
+      margin: 0;
       padding: 0;
       list-style: none;
       color: #808080; }
