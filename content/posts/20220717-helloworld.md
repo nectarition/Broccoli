@@ -20,3 +20,4 @@ Title = "Nectarition Blog はじめました"
 * 静的サイトジェネレータ: HUGO
 * ホスティング: Netlify
 * コンテンツ管理: Forestry.io
+* すべて無料プラン。コスト削減中のねくたりしょんにはピッタリです。
