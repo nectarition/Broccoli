@@ -1,0 +1,24 @@
+---
+label: post
+hide_body: false
+display_field: Title
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: date
+  type: datetime
+  label: Date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: disableSummary
+  type: boolean
+  label: Disable Summary
+pages:
+- content/posts/20220717-helloworld.md
