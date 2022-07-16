@@ -17,4 +17,5 @@ fields:
     time_format: 
     display_utc: false
 pages:
+- content/posts/forestry.md
 - content/posts/my-first-post.md
