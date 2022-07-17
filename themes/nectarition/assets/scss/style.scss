@@ -27,6 +27,13 @@ a {
   color: #cc3355;
 }
 
+h1 {
+  display: inline-block;
+  padding: 0 5px;
+  background-color: #cc3355;
+  color: #ffffff;
+}
+
 h2,
 h3,
 h4,
@@ -90,6 +97,7 @@ ul {
     }
 
     .breadcrumbs {
+      margin-bottom: 20px;
       padding: 10px;
       background-color: #efefef;
 
@@ -107,7 +115,8 @@ ul {
 .card {
   padding: 10px;
   border-bottom: 2px solid #cc3355;
-  transition: 0.2s;
+
+  transition: color linear 0.2s;
 
   &:hover {
     background-color: #efefef;

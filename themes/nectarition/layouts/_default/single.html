@@ -4,7 +4,7 @@
     <li><a href="{{ .Site.BaseURL | relLangURL }}">ホーム</a></li>
     <li>{{ .Title }}</li>
   </ul>
-  <h1 class="noneGap">{{ .Title }}</h1>
+  <h1>{{ .Title }}</h1>
   {{ if $isPosts }}
   <ul class="metaList">
     <li>{{ .Params.date.Format "2006年01月02日 15時04分"}} 更新</li>
