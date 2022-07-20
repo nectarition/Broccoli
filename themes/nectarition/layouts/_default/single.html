@@ -7,7 +7,7 @@
   <h1>{{ .Title }}</h1>
   {{ if $isPosts }}
   <ul class="metaList">
-    <li>{{ .Params.date.Format "2006年01月02日 15時04分"}} 更新</li>
+    <li>{{ .Params.date.Local.Format "2006年01月02日 15時04分"}} 更新</li>
   </ul>
   {{ end }}
 </div>
