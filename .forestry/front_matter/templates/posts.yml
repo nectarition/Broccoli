@@ -17,6 +17,7 @@ fields:
     date_format: 
     time_format: 
     display_utc: false
+  default: now
 - name: disableSummary
   type: boolean
   label: Disable Summary
