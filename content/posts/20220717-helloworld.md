@@ -6,7 +6,8 @@ disableSummary = true
 title = "Nectarition Blog はじめました"
 
 +++
-おはようございます。Nectaritionの染宮です。
+
+おはようございます。Nectarition の染宮です。
 
 表題のとおり、ブログをはじめます。
 
@@ -22,7 +23,8 @@ title = "Nectarition Blog はじめました"
 
 ## 環境
 
-* 静的サイトジェネレータ: HUGO
-* ホスティング: Netlify
-* コンテンツ管理: Forestry.io
-* すべて無料プラン。コスト削減中のねくたりしょんにはピッタリです。
+- 静的サイトジェネレータ: HUGO
+- ホスティング: Netlify
+- コンテンツ管理: Forestry.io
+- すべて無料プラン。コスト削減中のねくたりしょんにはピッタリです。
+- https://aaaaaaaa.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
