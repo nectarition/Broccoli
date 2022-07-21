@@ -84,7 +84,8 @@ ul {
       padding: 0; } }
   .container main {
     padding: 20px;
-    background-color: #ffffff; }
+    background-color: #ffffff;
+    word-break: break-all; }
     @media screen and (max-width: 800px) {
       .container main {
         padding: 10px; } }
