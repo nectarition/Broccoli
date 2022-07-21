@@ -36,7 +36,7 @@ a {
 
 html,
 body {
-  background-color: #ffffff; }
+  background-color: #efefef; }
 
 header {
   padding: 15px 20px;
@@ -45,8 +45,9 @@ header {
   header .logo {
     height: 20px; }
 
-footer {
-  padding: 20px; }
+@media screen and (max-width: 800px) {
+  footer {
+    padding: 20px; } }
 
 a {
   color: #cc3355; }
@@ -82,7 +83,8 @@ ul {
       margin: 0;
       padding: 0; } }
   .container main {
-    padding: 20px; }
+    padding: 20px;
+    background-color: #ffffff; }
     @media screen and (max-width: 800px) {
       .container main {
         padding: 10px; } }
@@ -112,19 +114,25 @@ ul {
 .noneGap {
   margin-bottom: 0; }
 
+.cardWrap {
+  display: block;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #efefef; }
+  .cardWrap:last-child {
+    margin-bottom: 0; }
+
 .card {
   padding: 10px;
-  border-bottom: 2px solid #cc3355;
+  background-color: #fafafa;
   transition: color linear 0.2s; }
   .card:hover {
     background-color: #efefef; }
   .cardTitle {
     display: inline-block;
     padding: 0 5px;
-    font-size: 1.5em;
     font-weight: bold;
-    color: #404040;
+    color: #808080;
     background-color: #cc3355;
     color: #ffffff; }
   .cardDescription {
-    color: #808080; }
+    color: #202020; }

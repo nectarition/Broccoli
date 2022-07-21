@@ -6,7 +6,7 @@
 
 html,
 body {
-  background-color: #ffffff;
+  background-color: #efefef;
 }
 
 header {
@@ -20,7 +20,9 @@ header {
 }
 
 footer {
-  padding: 20px;
+  @include mq {
+    padding: 20px;
+  }
 }
 
 a {
@@ -70,6 +72,8 @@ ul {
     @include mq {
       padding: 10px;
     }
+
+    background-color: #ffffff;
   }
 
   .meta {
@@ -112,9 +116,19 @@ ul {
   margin-bottom: 0;
 }
 
+.cardWrap {
+  display: block;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #efefef;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .card {
   padding: 10px;
-  border-bottom: 2px solid #cc3355;
+  background-color: #fafafa;
 
   transition: color linear 0.2s;
 
@@ -125,14 +139,13 @@ ul {
   &Title {
     display: inline-block;
     padding: 0 5px;
-    font-size: 1.5em;
     font-weight: bold;
-    color: #404040;
+    color: #808080;
     background-color: #cc3355;
     color: #ffffff;
   }
 
   &Description {
-    color: #808080;
+    color: #202020;
   }
 }
