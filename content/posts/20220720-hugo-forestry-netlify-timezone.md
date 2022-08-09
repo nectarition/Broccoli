@@ -10,7 +10,7 @@ Hugo + Forestry + Netlify環境下で日付にタイムゾーンが適用され�
 
 ## TL;DR
 
-* Netlifyの環境変数設定に「TZ=Asia/Tokyo」を入れよう
+* Netlifyの環境変数設定に「TZ=Asia/Tokyo」を入れよう。
 * テーマの日付を表示する記述を `Date.Format`から`Date.Local.Format`に変更しよう
 
 ## 背景
