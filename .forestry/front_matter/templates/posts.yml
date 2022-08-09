@@ -22,8 +22,8 @@ fields:
   type: boolean
   label: Disable Summary
 pages:
-- content/posts/100.md
 - content/posts/20220717-created-theme.md
 - content/posts/20220717-helloworld.md
 - content/posts/20220720-hugo-forestry-netlify-timezone.md
 - content/posts/20220725-firebase.md
+- content/posts/20220809-c100.md
