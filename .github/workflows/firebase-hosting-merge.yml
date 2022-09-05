@@ -18,9 +18,7 @@ jobs:
         with:
           hugo-version: 'latest'
       - run: hugo
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - uses: peaceiris/actions-gh-pages@v3
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_NCT_BROCCOLI }}'
-          channelId: live
-          projectId: nct-broccoli
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
