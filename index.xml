@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nectarition / ねくたりしょん</title>
+    <link>/</link>
+    <description>Recent content on Nectarition / ねくたりしょん</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Tue, 09 Aug 2022 05:35:17 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>コミックマーケット100に本を出します</title>
+      <link>/posts/20220809-c100/</link>
+      <pubDate>Tue, 09 Aug 2022 05:35:17 +0000</pubDate>
+      
+      <guid>/posts/20220809-c100/</guid>
+      <description>&lt;p&gt;2022年8月13日に行われる「コミックマーケット100」1日目のN-Pointスペースにて、&lt;br&gt;
+当サークルの同人誌即売会チーム「NCT-Blossom」が開催した「小春六花はヨーグルトが食べたい」「しおばな祭」の開催記録、後日談を記したコピー本を配布します。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Firebase Hostingに移行しました</title>
+      <link>/posts/20220725-firebase/</link>
+      <pubDate>Mon, 25 Jul 2022 14:49:55 +0000</pubDate>
+      
+      <guid>/posts/20220725-firebase/</guid>
+      <description>Nectaritionの提供するサービスが順次Firebaseに切り替わっていく流れの中、このブログもNetlifyからFirebase Hostingに変更しました。
+AIMSもFirebaseで動くようにリニューアルしていく予定です。</description>
+    </item>
+    
+    <item>
+      <title>Hugo &#43; Forestry &#43; Netlify環境下における日付情報のタイムゾーン適用</title>
+      <link>/posts/20220720-hugo-forestry-netlify-timezone/</link>
+      <pubDate>Wed, 20 Jul 2022 05:50:17 +0000</pubDate>
+      
+      <guid>/posts/20220720-hugo-forestry-netlify-timezone/</guid>
+      <description>&lt;p&gt;Hugo + Forestry + Netlify環境下で日付にタイムゾーンが適用されない問題を解決します。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>テーマを作ってみました</title>
+      <link>/posts/20220717-created-theme/</link>
+      <pubDate>Sat, 16 Jul 2022 21:08:21 +0000</pubDate>
+      
+      <guid>/posts/20220717-created-theme/</guid>
+      <description>&lt;p&gt;おはようございます。染宮です。&lt;/p&gt;
+&lt;p&gt;このサイトを構築したのが、今日の0時8分ぐらいだった気がします。&lt;br&gt;
+気がついたらテーマを作っていました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Nectarition Blog はじめました</title>
+      <link>/posts/20220717-helloworld/</link>
+      <pubDate>Sun, 17 Jul 2022 00:00:00 +0900</pubDate>
+      
+      <guid>/posts/20220717-helloworld/</guid>
+      <description>&lt;p&gt;おはようございます。Nectarition の染宮です。&lt;/p&gt;
+&lt;p&gt;表題のとおり、ブログをはじめます。&lt;/p&gt;
+&lt;p&gt;アーカイブすべきと判断した内容をつらつら書いていくので、頻度はそこまで高くないです。&lt;br&gt;
+重要なお知らせなどは、ここで告知すると思います。&lt;br&gt;
+運用方針はまだ曖昧にしか決まっていませんが、今後ともよろしくお願いいたします。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

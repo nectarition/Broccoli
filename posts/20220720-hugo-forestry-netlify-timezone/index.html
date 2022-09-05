@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href=" /scss/main.css " />
+
+<meta property="og:title" content="Hugo &#43; Forestry &#43; Netlify環境下における日付情報のタイムゾーン適用" />
+<meta property="og:image" content=" " />
+<meta property="og:site_name" content="Nectarition / ねくたりしょん" />
+<meta name="generator" content="Hugo 0.102.3" />  
+<meta
+  property="og:description"
+  content=" Hugo &#43; Forestry &#43; Netlify環境下で日付にタイムゾーンが適用されない問題を解決します。 "
+/>
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/20220720-hugo-forestry-netlify-timezone/" />
+<meta property="article:section" content="posts" />
+
+
+<meta name="twitter:card" content="summary" />
+
+<title>
+  Hugo &#43; Forestry &#43; Netlify環境下における日付情報のタイムゾーン適用 - Nectarition / ねくたりしょん
+</title>
+<body><header>
+  <a href="/">
+    <img class="logo" src="/system-images/logo.svg"
+  /></a>
+</header>
+<div class="container">
+      <main> 
+<div class="meta">
+  <ul class="breadcrumbs">
+    <li><a href="/">ホーム</a></li>
+    <li>Hugo &#43; Forestry &#43; Netlify環境下における日付情報のタイムゾーン適用</li>
+  </ul>
+  <h1>Hugo &#43; Forestry &#43; Netlify環境下における日付情報のタイムゾーン適用</h1>
+  
+  <ul class="metaList">
+    <li>2022年07月20日 14時50分 更新</li>
+  </ul>
+  
+</div>
+<p>Hugo + Forestry + Netlify環境下で日付にタイムゾーンが適用されない問題を解決します。</p>
+<h2 id="tldr">TL;DR</h2>
+<ul>
+<li>Netlifyの環境変数設定に「TZ=Asia/Tokyo」を入れよう。</li>
+<li>テーマの日付を表示する記述を <code>Date.Format</code>から<code>Date.Local.Format</code>に変更しよう</li>
+</ul>
+<h2 id="背景">背景</h2>
+<ul>
+<li>Hugo + Forestry + Netlify環境下で、タイムゾーンが適用されずにUTCで表示される。</li>
+<li>求める動作: 適切なタイムゾーン設定による正しい日付表示。</li>
+</ul>
+<h2 id="原因">原因</h2>
+<ol>
+<li>Forestryのタイムゾーン設定は変更済み。</li>
+<li>Forestryが出力するMarkdownの日付情報に設定したタイムゾーン情報が付加されていない。
+<ul>
+<li>どこのタイムゾーンを設定しているかは調査が必要。</li>
+</ul>
+</li>
+<li>Hugoでの生成時にMarkdownで指定されている日付情報を元にページが生成される。</li>
+</ol>
+<h2 id="関連リンク">関連リンク</h2>
+<ul>
+<li><a href="https://gohugo.io/functions/format/#use-local-and-utc" title="https://gohugo.io/functions/format/#use-local-and-utc">https://gohugo.io/functions/format/#use-local-and-utc</a></li>
+<li><a href="https://matsuoshi.hatenablog.com/entry/2018/11/09/000000" title="https://matsuoshi.hatenablog.com/entry/2018/11/09/000000">https://matsuoshi.hatenablog.com/entry/2018/11/09/000000</a></li>
+</ul> </main>
+    </div>
+    <div class="container"><footer>
+  <p>&copy; 2022 Nectarition</p>
+  <p>
+    SSG <a target="_blank" href="https://gohugo.io">♥ HUGO</a> / Theme
+    <a target="_blank" href="https://github.com/nectarition/Broccoli"
+      >♥ Nectarition</a
+    >
+  </p>
+</footer>
+</div>
+  </body>
+</html>
