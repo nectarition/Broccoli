@@ -18,8 +18,19 @@ jobs:
         with:
           hugo-version: 'latest'
       - run: hugo
-      - uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          cname: nectarition.jp
+       - uses: actions/upload-pages-artifact@v1
+         with:
+           path: build
+   deploy:
+     runs-on: ubuntu-latest
+     needs: build
+     permissions:
+       pages: write
+       id-token: write
+     environment:
+       name: github-pages
+       url: ${{ steps.deployment.outputs.page_url }}
+     steps:
+       - name: Deploy to GitHub Pages
+         id: deployment
+         uses: actions/deploy-pages@v1
