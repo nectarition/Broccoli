@@ -1,32 +1,38 @@
 {{ define "main" }}
 <h2>Nectaritionとは？</h2>
 <p>
-  染宮ねいろの突発的な趣味を共有して、何か作ったり作らなかったり、貢献したりしなかったり、入ってても何のメリットも得られないサークル。
+  <a href="https://twitter.com/nirsmmy">染宮ねいろ</a
+  >の突発的な趣味を共有して、何か作ったり作らなかったり、貢献したりしなかったり、入ってても何のメリットも得られないサークル。
 </p>
-<h2>チーム活動紹介</h2>
-<p>
-  <b>NCT-Blossom</b> 同人誌即売会イベント主催
-  <a target="_blank" href="https://twitter.com/nct_kohatabe">@nct_kohatabe</a>
-  /
-  <a target="_blank" href="https://kohatabe.jp">#コハタベ</a>
-  <a target="_blank" href="https://shiokazehs.jp">#しおばな祭</a>
-  <br />
-  <b>NCT-Cherrypick</b>
-  提携組織で使用している認証基盤やシステムインフラの整備、システム開発。
-</p>
-<h2>Articles</h2>
+
+<h2>チーム紹介</h2>
+<ul>
+  <li>
+    <b>Blossom</b>&nbsp;同人誌即売会イベント主催、開催支援。
+    <ul>
+      <li>
+        <a href="https://twitter.com/nct_kohatabe">@nct_kohatabe</a>
+        /
+        <a href="https://kohatabe.jp">#コハタベ</a>
+        <a href="https://shiokazehs.jp">#しおばな祭</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <b>Cherrypick</b>&nbsp;
+    提携組織で使用している認証基盤やシステムインフラの整備、システム開発。
+  </li>
+</ul>
+
+<h2>記事</h2>
 {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }} {{
 range $pages }}
 <a href="{{ .Permalink }}" class="cardWrap">
   <article class="card">
     <div class="cardTitle">{{ .Title }}</div>
     <ul class="metaList">
-      <li>{{ .Params.date.Local.Format "2006年01月02日 15時04分"}} 更新</li>
+      <li>{{ .Params.date.Local.Format "2006年01月02日 15時04分"}}</li>
     </ul>
-    <div class="cardDescription">
-      {{ if not .Site.Params.disableSummary }} {{ .Summary | safeHTML }} {{ end
-      }}
-    </div>
   </article>
 </a>
 {{ end }} {{ end }}
