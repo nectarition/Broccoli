@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: cat ./themes/nectarition/assets/reset.scss
+      - run: ls -la
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
