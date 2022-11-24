@@ -4,18 +4,18 @@ disableSummary = false
 title = "Hugo + Forestry + Netlify環境下における日付情報のタイムゾーン適用"
 
 +++
-Hugo + Forestry + Netlify環境下で日付にタイムゾーンが適用されない問題を解決します。
+Hugo + Forestry環境下で日付にタイムゾーンが適用されない問題を解決します。
 
 <!--more-->
 
 ## TL;DR
 
-* Netlifyの環境変数設定に「TZ=Asia/Tokyo」を入れよう。
+* 環境変数設定に「TZ=Asia/Tokyo」を入れよう。
 * テーマの日付を表示する記述を `Date.Format`から`Date.Local.Format`に変更しよう
 
 ## 背景
 
-* Hugo + Forestry + Netlify環境下で、タイムゾーンが適用されずにUTCで表示される。
+* Hugo + Forestry 環境下で、タイムゾーンが適用されずにUTCで表示される。
 * 求める動作: 適切なタイムゾーン設定による正しい日付表示。
 
 ## 原因
