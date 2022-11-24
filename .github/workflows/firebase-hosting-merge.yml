@@ -18,6 +18,7 @@ jobs:
         with:
           hugo-version: 'latest'
       - run: hugo
+      - run: ls -la
       - uses: actions/upload-pages-artifact@v1
         with:
           path: build
