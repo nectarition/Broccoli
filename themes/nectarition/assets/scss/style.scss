@@ -133,9 +133,9 @@ ul {
   padding: 10px;
   background-color: #fafafa;
 
-  transition: color linear 0.2s;
+  transition: background-color linear 0.2s;
 
-  &:hover {
+  &:active {
     background-color: #efefef;
   }
 
