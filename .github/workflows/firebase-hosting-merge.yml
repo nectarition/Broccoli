@@ -18,7 +18,7 @@ jobs:
         with:
           hugo-version: 'latest'
       - run: hugo
-      - run: ls -la
+      - run: touch ./public/scss/main.css
       - uses: actions/upload-pages-artifact@v1
         with:
           path: public
