@@ -13,14 +13,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: cat themes/nectarition/assets/scss/reset.scss
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
           extended: true
       - run: hugo
-      - run: cat ./public/scss/main.css
       - uses: actions/upload-pages-artifact@v1
         with:
           path: public
