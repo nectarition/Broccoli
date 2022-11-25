@@ -1,5 +1,5 @@
 +++
-date = 2022-12-11T15:00:00Z
+date = 2022-11-24T15:00:00Z
 disableSummary = false
 title = "文化祭を作る"
 
