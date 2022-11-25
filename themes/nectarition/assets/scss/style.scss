@@ -40,6 +40,12 @@ h1 {
   color: #ffffff;
 }
 
+h2 {
+  border-bottom: 2px solid #cc3355;
+  border-left: 0.5em solid #cc3355;
+  padding-left: 0.5em;
+}
+
 h2,
 h3,
 h4,
@@ -56,6 +62,10 @@ ul {
       content: '・';
     }
   }
+}
+
+p {
+  line-height: 2em;
 }
 
 code {
