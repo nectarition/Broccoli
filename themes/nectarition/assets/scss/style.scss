@@ -45,7 +45,7 @@ h1 {
 
 h2 {
   border-bottom: 2px solid #cc3355;
-  padding: 0 0.25em;
+  padding: 0.25em;
 }
 
 h2,
@@ -129,7 +129,7 @@ code {
       padding: 10px;
       background-color: #efefef;
       color: #404040;
-      
+
       li:not(:first-child)::before {
         content: ' > ';
       }
@@ -154,7 +154,7 @@ code {
 .card {
   padding: 10px;
   background-color: #fafafa;
-  border-left: 0.75em solid #505050;
+  border-left: 0.75em solid #cc3355;
   
   box-shadow: 0 1px 2px #00000022;
 
@@ -174,7 +174,7 @@ code {
     display: inline-block;
     padding: 0 5px;
     font-weight: bold;
-    background-color: #505050;
+    background-color: #cc3355;
     color: #ffffff;
   }
 
