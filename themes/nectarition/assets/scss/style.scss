@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
 @mixin mq {
   @media screen and (max-width: 800px) {
     @content;
@@ -7,6 +9,7 @@
 html,
 body {
   background-color: #efefef;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 header {
@@ -42,8 +45,7 @@ h1 {
 
 h2 {
   border-bottom: 2px solid #cc3355;
-  border-left: 0.5em solid #cc3355;
-  padding-left: 0.5em;
+  padding: 0 0.25em;
 }
 
 h2,
@@ -106,7 +108,6 @@ code {
       margin: 0;
       padding: 0;
       list-style: none;
-      color: #808080;
 
       li {
         display: inline-block;
@@ -114,6 +115,7 @@ code {
           content: '';
         }
       }
+      color: #cc3355;
     }
 
     &List {
@@ -126,7 +128,8 @@ code {
       margin-bottom: 20px;
       padding: 10px;
       background-color: #efefef;
-
+      color: #404040;
+      
       li:not(:first-child)::before {
         content: ' > ';
       }
@@ -151,7 +154,7 @@ code {
 .card {
   padding: 10px;
   background-color: #fafafa;
-  border-left: 0.75em solid #cc3355;
+  border-left: 0.75em solid #505050;
   
   box-shadow: 0 1px 2px #00000022;
 
@@ -171,8 +174,7 @@ code {
     display: inline-block;
     padding: 0 5px;
     font-weight: bold;
-    color: #808080;
-    background-color: #cc3355;
+    background-color: #505050;
     color: #ffffff;
   }
 
