@@ -1,7 +1,6 @@
 +++
 date = 2022-12-11T15:00:00Z
 disableSummary = false
-draft = true
 title = "文化祭を作る"
 
 +++
