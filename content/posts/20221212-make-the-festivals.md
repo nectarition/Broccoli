@@ -1,12 +1,12 @@
 +++
-date = 2022-12-12T03:00:00Z
+date = 2022-12-11T15:00:00Z
 disableSummary = false
 title = "文化祭を作る"
 
 +++
 おはようございます、染宮ねいろです。この記事は「[SynthVとかTOKYO6とか Advent Calendar 2022](https://adventar.org/calendars/8111)」12日目の記事です。
 
-昨日11日目は、きっくすさんの「2022年に作った曲の振り返り」でした！
+昨日11日目は、きっくすさんの「[2022年に作った曲の振り返り](https://note.com/studiobiotope/n/n7607ad373691)」でした！
 
 今回の記事では過去に開催した「しおばな祭」の裏話を少しだけ記します。
 
