@@ -1,14 +1,3 @@
-{{ define "main" }} {{ $isPosts := eq .Type "posts" }}
-<div class="meta">
-  <ul class="breadcrumbs">
-    <li><a href="{{ .Site.BaseURL | relLangURL }}">ホーム</a></li>
-    <li>{{ .Title }}</li>
-  </ul>
-  <h1>{{ .Title }}</h1>
-  {{ if $isPosts }}
-  <ul class="metaList">
-    <li>{{ .Params.date.Local.Format "2006年01月02日 15時04分"}} 更新</li>
-  </ul>
-  {{ end }}
-</div>
-{{ .Content }} {{ end }}
+{{ define "main" }}
+single
+{{ end }}

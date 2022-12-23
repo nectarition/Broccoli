@@ -1,184 +1,200 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
 
-@mixin mq {
-  @media screen and (max-width: 800px) {
-    @content;
-  }
-}
-
-html,
 body {
-  background-color: #efefef;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   font-family: 'Noto Sans JP', sans-serif;
 }
 
 header {
-  padding: 15px 20px;
-  background-color: #cc3355;
-  color: #ffffff;
+  padding: 50px;
+  border-top: 4px solid #ba3651;
+  border-bottom: 2px solid #ba3651;
 
-  .logo {
-    height: 20px;
-    vertical-align: middle;
+  .brand {
+    text-align: center;
+    
+    &_message {
+      font-weight: bold;
+      letter-spacing: 0.25em;
+    }
+  }
+
+  ul.menu {
+    display: flex;
+    margin-top: 20px;
+    
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    li {
+      display: inline-block;
+      margin-bottom: -10px;
+      padding-bottom: 10px;
+
+      font-weight: bold;
+      color: #404040;
+      position: relative;
+
+      cursor: pointer;
+
+      &::before {
+        display: inline-block;
+        position: absolute;
+        width: 0;
+        left: 0;
+        bottom: 0;
+        border-bottom: 2px solid #ba3651;
+        content: '';
+
+        transition: width ease-in-out 200ms;
+      }
+
+      &:has(a[class="active"]),
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+      &:has(a[class="active"]) {
+        background: linear-gradient(90deg, #751b1b, #ba3651);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+main {
+  padding: 40px 25%;
+  padding-bottom: 0;
+
+  ul.breadcrumbs {
+    margin-bottom: 20px;;
+    padding: 10px;
+    background-color: #f0f0f0;
+
+    li {
+      display: inline;
+      position: relative;
+      padding-right: 1.5em;
+      &::after {
+        display: inline-block;
+        position: absolute;
+        top: calc(50% - 0.25em);
+        right: 0.5em;
+        content: '';
+        width: 7px;
+        height: 7px;
+        transform: rotate(-45deg);
+        border-bottom: 2px solid #404040;
+        border-right: 2px solid #404040;
+      }
+    }
+    li:last-child {
+      color: #ba3651;
+      font-weight: bold;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  .postMeta {
+    margin-bottom: 20px;
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+  article {
+    margin-bottom: 20px;
+  }
+
+  .postPager {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: #404040;
+
+    &_prev, &_next {
+      padding: 10px;
+      a {
+        color: #404040;
+        text-decoration: none;
+      }
+    }
+    &_prev {
+      padding-left: 61px;
+      text-align: left;
+      background-color: #f8f8f8;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        display: inline-block;
+        content: '';
+        width: 12px;
+        height: 12px;
+        top: 40%;
+        left: 26px;
+        border-bottom: #404040 3px solid;
+        border-left: #404040 3px solid;
+        transform: rotate(45deg);
+      }
+    }
+    &_next {
+      padding-right: 61px;
+      text-align: right;
+      background-color: #f0f0f0;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        display: inline-block;
+        content: '';
+        width: 12px;
+        height: 12px;
+        top: 40%;
+        right: 26px;
+        border-top: #404040 3px solid;
+        border-right: #404040 3px solid;
+        transform: rotate(45deg);
+      }
+    }
+
+    &_direction {
+      font-size: 0.75em;
+    }
+    &_title {
+      font-weight: bold;
+    }
   }
 }
 
 footer {
-  @include mq {
-    padding: 20px;
+  text-align: center;
+
+  .copyright {
+    padding: 50px;
+    color: #1e1e1e;
+  }
+  .logo {
+    padding: 50px;
+    padding-top: 0;
   }
 }
 
-a {
-  color: #cc3355;
-  &:hover {
-    text-decoration: underline;
-  }
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 20px;
 }
 
-h1 {
-  display: inline-block;
-  padding: 0 5px;
-  background-color: #cc3355;
-  color: #ffffff;
-}
-
-h2 {
-  border-bottom: 2px solid #cc3355;
-  padding: 0.25em;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #cc3355;
-}
-
-ul {
-  list-style: none;
-  padding-left: 1em;
-  li {
-    &::before {
-      content: '・';
-    }
-  }
+h2, h3, h4, h5, h6 {
+  color: #ba3651;
 }
 
 p {
-  line-height: 2em;
-}
-
-code {
-  font-family: Consolas;
-  background-color: #e0e0e0;
-  padding: 2px;
-}
-
-.container {
-  min-width: 700px;
-  width: 50%;
-  margin: 20px auto;
-  padding-top: 0;
-
-  @include mq {
-    width: 100%;
-    min-width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  main {
-    padding: 20px;
-    @include mq {
-      padding: 10px;
-    }
-
-    background-color: #ffffff;
-
-    word-break: break-all;
-  }
-
-  .meta {
-    margin-bottom: 10px;
-
-    &List,
-    .breadcrumbs {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-
-      li {
-        display: inline-block;
-        &:first-child::before {
-          content: '';
-        }
-      }
-      color: #cc3355;
-    }
-
-    &List {
-      li:not(:first-child)::before {
-        content: ' / ';
-      }
-    }
-
-    .breadcrumbs {
-      margin-bottom: 20px;
-      padding: 10px;
-      background-color: #efefef;
-      color: #404040;
-
-      li:not(:first-child)::before {
-        content: ' > ';
-      }
-    }
-  }
-}
-
-.noneGap {
-  margin-bottom: 0;
-}
-
-.cardWrap {
-  display: block;
-  margin-bottom: 5px;
-  border-bottom: 2px solid #efefef;
-
+  margin-bottom: 20px;
   &:last-child {
     margin-bottom: 0;
-  }
-}
-
-.card {
-  padding: 10px;
-  background-color: #fafafa;
-  border-left: 0.75em solid #cc3355;
-  
-  box-shadow: 0 1px 2px #00000022;
-
-  transition:
-    background-color linear 0.2s,
-    box-shadow linear 0.1s;
-
-  &:hover {
-    box-shadow: 0 2px 4px #00000040;
-  }
-
-  &:active {
-    background-color: #efefef;
-  }
-
-  &Title {
-    display: inline-block;
-    padding: 0 5px;
-    font-weight: bold;
-    background-color: #cc3355;
-    color: #ffffff;
-  }
-
-  &Description {
-    color: #202020;
   }
 }
