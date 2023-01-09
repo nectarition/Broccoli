@@ -35,10 +35,12 @@ header {
       padding-bottom: 10px;
 
       font-weight: bold;
-      color: #404040;
       position: relative;
 
-      cursor: pointer;
+      a {
+        color: #404040;
+        text-decoration: none;
+      }
 
       &::before {
         display: inline-block;
@@ -59,9 +61,9 @@ header {
         }
       }
       &:has(a[class="active"]) {
-        background: linear-gradient(90deg, #751b1b, #ba3651);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        a {
+          color: #ba3651;
+        }
       }
     }
   }
@@ -71,15 +73,40 @@ main {
   padding: 40px 25%;
   padding-bottom: 0;
 
+  ul {
+    margin-bottom: 20px;
+    padding-left: 1em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    li {
+      margin-bottom: 1em;
+      &::before {
+        content: '・';
+      }
+    }
+  }
+
   ul.breadcrumbs {
     margin-bottom: 20px;;
     padding: 10px;
     background-color: #f0f0f0;
 
+    a {
+      color: #404040;
+      text-decoration: none;
+    }
+    
     li {
       display: inline;
       position: relative;
       padding-right: 1.5em;
+
+      &::before {
+        content: '';
+      }
+
       &::after {
         display: inline-block;
         position: absolute;
@@ -124,6 +151,8 @@ main {
       }
     }
     &_prev {
+      grid-column: 1;
+
       padding-left: 61px;
       text-align: left;
       background-color: #f8f8f8;
@@ -143,6 +172,8 @@ main {
       }
     }
     &_next {
+      grid-column: 2;
+
       padding-right: 61px;
       text-align: right;
       background-color: #f0f0f0;
@@ -194,7 +225,19 @@ h2, h3, h4, h5, h6 {
 
 p {
   margin-bottom: 20px;
+  line-height: 2em;
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+a:link {
+  color: #ba3651;
+}
+
+blockquote {
+  margin-bottom: 20px;
+  padding: 10px;
+  padding-left: 1em;
+  border-left: 0.5em solid #ba3651;
 }
