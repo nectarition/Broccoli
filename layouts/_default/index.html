@@ -65,7 +65,7 @@
               <span class="label">{{ .Params.Date.Local.Format "2006.01" }}</span>
             </div>
             <div class="workCard_item_meta_title"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
-            <div class="workCard_item_meta_description">{{ .Summary }}</div>
+            <div class="workCard_item_meta_description">{{ .Params.SubTitle }}</div>
           </div>
         </div>
       {{ end }}
