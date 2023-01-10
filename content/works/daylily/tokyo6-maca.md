@@ -8,4 +8,6 @@ departments = ['daylily']
 
 +++
 
+<!--more-->
+
 # TOKYO6限界コンピ

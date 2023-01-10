@@ -7,4 +7,6 @@ departments = ['acerola']
 
 +++
 
+<!--more-->
+
 # Synthesizer V Unofficial Festival 2023
