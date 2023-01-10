@@ -1,9 +1,33 @@
 baseURL: ''
 languageCode: 'ja-JP'
-title: 'Nectarition / ねくたりしょん'
-theme: 'nectarition'
+title: 'ねくたりしょん / Nectarition'
 
 params:
   author: 'Nectarition'
   authorPersonalName: '染宮ねいろ'
   logo: '/system-images/logo.svg'
+
+sectionPagesMenu: 'main'
+
+menu:
+  main:
+    - name: 'ABOUT'
+      weight: 10
+      identifier: 'about'
+      url: '/'
+    - name: 'WORKS'
+      weight: 20
+      identifier: 'works'
+      url: '/works/'
+    - name: 'POSTS'
+      weight: 30
+      identifier: 'posts'
+      url: '/posts/'
+    - name: 'LINKS'
+      weight: 40
+      identifier: 'links'
+      url: '/links/'
+    - name: 'CONTACTS'
+      weight: 50
+      identifier: 'contacts'
+      url: '/contacts/'

@@ -1,5 +1,5 @@
 +++
-title = "Contacts"
+Title = "Contacts"
 
 +++
 

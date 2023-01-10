@@ -15,8 +15,13 @@ header {
     text-align: center;
     
     &_message {
+      padding-bottom: 5px;
       font-weight: bold;
       letter-spacing: 0.25em;
+    }
+
+    &_logo img {
+      width: 196px;
     }
   }
 
@@ -210,6 +215,9 @@ footer {
     color: #1e1e1e;
   }
   .logo {
+    img {
+      width: 32px;
+    }
     padding: 50px;
     padding-top: 0;
   }
@@ -240,4 +248,5 @@ blockquote {
   padding: 10px;
   padding-left: 1em;
   border-left: 0.5em solid #ba3651;
+  background-color: #f0f0f0;
 }

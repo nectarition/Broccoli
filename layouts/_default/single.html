@@ -12,7 +12,7 @@
   <article>
     {{ .Content }}
   </article>
-{{ with $IsPost }}
+{{ if $IsPost }}
   <nav class="postPager">
 {{ with .PrevInSection }}
     <div class="postPager_prev">
