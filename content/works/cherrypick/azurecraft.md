@@ -7,4 +7,8 @@ departments = ['cherrypick']
 
 +++
 
+Microsoft Azure研究活動です。
+
+<!--more-->
+
 # AzureCraft

@@ -7,4 +7,8 @@ departments = ['daylily']
 
 +++
 
+2023年度に使用する名刺をデザインしました。
+
+<!--more-->
+
 # Nectarition Business Card 2023

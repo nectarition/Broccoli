@@ -8,4 +8,6 @@ departments = ['daylily']
 
 +++
 
+<!--more-->
+
 # Virtual Voice Harmony
