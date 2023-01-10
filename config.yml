@@ -1,4 +1,4 @@
-baseURL: 'https://nectarition.jp'
+baseURL: 'https://nectarition.jp/'
 languageCode: 'ja-JP'
 title: 'ねくたりしょん / Nectarition'
 
@@ -12,6 +12,10 @@ taxonomies:
 
 menu:
   main:
+    - name: 'ABOUT'
+      weight: 1
+      identifier: 'about'
+      url: '/about/'
     - name: 'WORKS'
       weight: 10
       identifier: 'works'

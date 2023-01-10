@@ -3,7 +3,6 @@
   <div class="hero">
     <div class="hero_description">
       <ul class="breadcrumbs">
-        <li><a href="{{ .Site.BaseURL | relLangURL }}">ホーム</a></li>
         <li><a href="{{ .Site.BaseURL | relLangURL }}works">WORKS</a></li>
       </ul>
     </div>
@@ -13,7 +12,7 @@
   <div class="container">
     {{- partial "parts/departmentLabelList" -}}
     {{ range .Data.Pages }}
-      <div class="workList_item">
+      <div class="workList_item" style="background-image: url('{{ .Params.EyecatchURL }}')">
         <div class="workList_item_labels">{{- partial "parts/departmentLabel" ( index .Params.Departments 0 ) -}}</div>
         <div class="workList_item_meta">
           <div class="workList_item_meta_subTitle">{{ .Params.SubTitle }}</div>
