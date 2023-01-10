@@ -1,0 +1,37 @@
+{{ define "main" }} {{ $Department := index .Params.Departments 0 }}
+<main>
+  <div class="hero">
+    <div class="hero_description">
+      <ul class="breadcrumbs">
+        <li><a href="{{ .Site.BaseURL | relLangURL }}works">WORKS</a></li>
+        <li><a href="{{ .Site.BaseURL }}departments/{{ $Department }}">{{- partial "parts/departmentLabel" $Department -}}</a></li>
+      </ul>
+    </div>
+    <div class="hero_title">{{ .Title }}</div>
+    <div class="hero_description">{{ .Params.SubTitle }}</div>
+    <div class="hero_description">{{ .Params.Date.Local.Format "2006年1月2日"}}</div>
+  </div>
+
+  <div class="container">
+    <article>
+      {{ .Content }}
+    </article>
+  {{ if or .PrevInSection .NextInSection }}
+    <nav class="postPager">
+  {{ with .PrevInSection }}
+      <div class="postPager_prev">
+        <div class="postPager_direction">PREVIOUS</div>
+        <div class="postPager_title"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></div>
+      </div>
+  {{ end }}
+  {{ with .NextInSection }}
+      <div class="postPager_next">
+        <div class="postPager_direction">NEXT</div>
+        <div class="postPager_title"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></div>
+      </div>
+  {{ end }}
+    </nav>
+  {{ end }}
+  </div>
+</main>
+{{ end }}

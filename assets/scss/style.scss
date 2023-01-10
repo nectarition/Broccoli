@@ -17,7 +17,7 @@ header {
     &_message {
       padding-bottom: 5px;
       font-weight: bold;
-      letter-spacing: 0.25em;
+      letter-spacing: 0.13em;
     }
 
     &_logo img {
@@ -75,8 +75,10 @@ header {
 }
 
 main {
-  padding: 40px 25%;
-  padding-bottom: 0;
+  .container {
+    padding: 40px 25%;
+    padding-bottom: 0;
+  }
 
   ul {
     margin-bottom: 20px;
@@ -205,6 +207,109 @@ main {
       font-weight: bold;
     }
   }
+
+  .postList {
+    &_item {
+      margin-bottom: 20px;
+      padding: 10px;
+      border-left: 8px solid #ba3651;
+      background-color: #f0f0f0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &_title {
+        font-weight: bold;
+      }
+      &_meta {
+
+      }
+    }
+  }
+
+  .hero {
+    padding: 50px 25%;
+    background-color: #1e1e1e;
+    color: #ffffff;
+
+    &_title {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    &_description {
+      .breadcrumbs { 
+        margin-bottom: 10px;
+        padding: 0;
+        background-color: transparent;
+        li {
+          a {
+            color: #ffffff;
+          }
+          &::after {
+            border-bottom: 2px solid #ffffff;
+            border-right: 2px solid #ffffff;
+          }
+        }
+      }
+    }
+  }
+
+  .workList {
+    &_item {
+      margin-bottom: 20px;
+      height: 256px;
+      position: relative;
+      background-color: #808080;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &_labels {
+        position: absolute;
+        top: 0;
+        font-size: 0;
+        span {
+          font-size: 1rem;
+        }
+      }
+
+      &_meta {
+        width: 100%;
+        padding: 10px;
+
+        position: absolute;
+        bottom: 0;
+        background-color: #ffffff80;
+
+        &_title a {
+          font-size: 1.5em;
+          font-weight: bold;
+        }
+        &_subTitle {
+  
+        }
+        &_description {
+  
+        }
+      }
+    }
+  }
+
+  .departmentList {
+    margin-bottom: 40px;
+
+    &_item {
+      display: inline-block;
+      margin-right: 5px;
+      transition: box-shadow 0.1s linear;
+      
+      &:hover {
+        box-shadow: 0 2px 10px #00000088;
+      }
+    }
+  }
 }
 
 footer {
@@ -239,8 +344,9 @@ p {
   }
 }
 
-a:link {
+a {
   color: #ba3651;
+  text-decoration: none;
 }
 
 blockquote {
@@ -249,4 +355,26 @@ blockquote {
   padding-left: 1em;
   border-left: 0.5em solid #ba3651;
   background-color: #f0f0f0;
+}
+
+.label {
+  display: inline-block;
+  padding: 5px;
+  background-color: #404040;
+  color: #ffffff;
+
+  &_department {
+    &-acerola {
+      background-color: #ba3651;
+    }
+    &-blossom {
+      background-color: #428cd1;
+    }
+    &-cherrypick {
+      background-color: #38ac38;
+    }
+    &-daylily {
+      background-color: #b3a73e;
+    }
+  }
 }

@@ -1,9 +1,8 @@
 +++
-Title = "Contacts"
+Title = "CONTACTS"
+SubTitle = "各チーム、ねくたりしょん主宰への問い合わせ先を集めました。"
 
 +++
-
-# お問い合わせ先
 
 ## 総合
 - info@nectarition.jp
@@ -16,6 +15,14 @@ Title = "Contacts"
   - cherry-pick@nectarition.jp
 - Nectarition Daylily(デザイン部門)
   - daylily@nectarition.jp
+
+## 主宰
+
+- 染宮ねいろ
+  - Twitterアカウント: [@nirsmmy](https://twitter.com/nirsmmy)
+    - スパム対策のためDMを閉じています。ご用件の際は一度リプライを飛ばしてください。
+  - メールアドレス: ts@nectarition.jp
+  - Discord: [nirsmmy#2120](https://discord.com/users/228854206973345800)
 
 # イベント
 

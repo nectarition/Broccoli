@@ -7,27 +7,20 @@ params:
   authorPersonalName: '染宮ねいろ'
   logo: '/system-images/logo.svg'
 
-sectionPagesMenu: 'main'
+taxonomies:
+  department: 'departments'
 
 menu:
   main:
-    - name: 'ABOUT'
-      weight: 10
-      identifier: 'about'
-      url: '/about/'
     - name: 'WORKS'
-      weight: 20
+      weight: 10
       identifier: 'works'
       url: '/works/'
     - name: 'POSTS'
-      weight: 30
+      weight: 20
       identifier: 'posts'
       url: '/posts/'
-    - name: 'LINKS'
-      weight: 40
-      identifier: 'links'
-      url: '/links/'
     - name: 'CONTACTS'
-      weight: 50
+      weight: 30
       identifier: 'contacts'
       url: '/contacts/'
