@@ -4,12 +4,22 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   font-family: 'Noto Sans JP', sans-serif;
+
+  @include dark {
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
+  }
 }
 
 header {
   padding: 50px;
-  border-top: 4px solid #ba3651;
+  border-top: 4px solid var(--accentcolor);
   background-color: #f0f0f0;
+  color: #000000;
+  
+  @include dark {
+    background-color: #d0d0d0;
+  }
 
   @include mq {
     padding: 35px;
@@ -60,7 +70,7 @@ header {
         width: 0;
         left: 0;
         bottom: 0;
-        border-bottom: 2px solid #ba3651;
+        border-bottom: 2px solid var(--accentcolor);
         content: '';
 
         transition: width ease-in-out 200ms;
@@ -74,7 +84,7 @@ header {
       }
       &:has(a[class="active"]) {
         a {
-          color: #ba3651;
+          color: var(--accentcolor);
         }
       }
     }
@@ -110,10 +120,16 @@ main {
     margin-bottom: 20px;;
     padding: 10px;
     background-color: #f0f0f0;
+    @include dark {
+      background-color: #1e1e1e;
+    }
 
     a {
       color: #404040;
       text-decoration: none;
+      @include dark {
+        color: #ffffff;
+      }
     }
     
     li {
@@ -136,10 +152,18 @@ main {
         transform: rotate(-45deg);
         border-bottom: 2px solid #404040;
         border-right: 2px solid #404040;
+        @include dark {
+          border-bottom: 2px solid #ffffff;
+          border-right: 2px solid #ffffff;
+        }
       }
     }
     li:last-child {
-      color: #ba3651;
+      color: var(--accentcolor);
+      @include dark {
+        color: var(--darkaccentcolor);
+      }
+      
       font-weight: bold;
       &::after {
         display: none;
@@ -160,6 +184,9 @@ main {
     display: grid;
     grid-template-columns: 50% 50%;
     color: #404040;
+    @include dark {
+      color: var(--textcolor);
+    }
 
     @include mq {
       display: block;
@@ -174,6 +201,9 @@ main {
       a {
         color: #404040;
         text-decoration: none;
+        @include dark {
+          color: var(--textcolor);
+        }
       }
     }
     &_prev {
@@ -183,6 +213,9 @@ main {
       text-align: left;
       background-color: #f8f8f8;
       position: relative;
+      @include dark {
+        background-color: #181818;
+      }
 
       &::before {
         position: absolute;
@@ -194,6 +227,10 @@ main {
         left: 26px;
         border-bottom: #404040 3px solid;
         border-left: #404040 3px solid;
+        @include dark {
+          border-bottom: #ffffff 3px solid;
+          border-left: #ffffff 3px solid;
+        }
         transform: rotate(45deg);
       }
     }
@@ -204,6 +241,9 @@ main {
       text-align: right;
       background-color: #f0f0f0;
       position: relative;
+      @include dark {
+        background-color: #202020;
+      }
 
       &::before {
         position: absolute;
@@ -215,6 +255,10 @@ main {
         right: 26px;
         border-top: #404040 3px solid;
         border-right: #404040 3px solid;
+        @include dark {
+          border-top: #ffffff 3px solid;
+          border-right: #ffffff 3px solid;
+        }
         transform: rotate(45deg);
       }
     }
@@ -231,8 +275,11 @@ main {
     &_item {
       margin-bottom: 20px;
       padding: 10px;
-      border-left: 8px solid #ba3651;
+      border-left: 8px solid var(--accentcolor);
       background-color: #f0f0f0;
+      @include dark {
+        background-color: #1e1e1e;
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -312,6 +359,13 @@ main {
         position: absolute;
         bottom: 0;
         background-color: #ffffffc0;
+        @include dark {
+          background-color: #1e1e1ec0;
+
+          &_title a {
+            color: var(--darkaccentcolor);
+          }
+        }
 
         &_title a {
           font-size: 1.5em;
@@ -349,6 +403,9 @@ footer {
 
   text-align: center;
   background-color: #f0f0f0;
+  @include dark {
+    background-color: #d0d0d0;
+  }
 
   .copyright {
     padding: 50px;
@@ -368,7 +425,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2, h3, h4, h5, h6 {
-  color: #ba3651;
+  color: var(--accentcolor);
+  @include dark {
+    color: var(--darkaccentcolor);
+  }
 }
 
 p {
@@ -380,16 +440,23 @@ p {
 }
 
 a {
-  color: #ba3651;
+  color: var(--accentcolor);
   text-decoration: none;
+  @include dark {
+    color: var(--darkaccentcolor);
+  }
 }
 
 blockquote {
   margin-bottom: 20px;
   padding: 10px;
   padding-left: 1em;
-  border-left: 0.5em solid #ba3651;
+  border-left: 0.5em solid var(--accentcolor);
   background-color: #f0f0f0;
+
+  @include dark {
+    background-color: #1e1e1e;
+  }
 }
 
 img {
@@ -409,7 +476,7 @@ img {
 
   &_department {
     &-acerola {
-      background-color: #ba3651;
+      background-color: var(--accentcolor);
     }
     &-blossom {
       background-color: #428cd1;

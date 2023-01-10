@@ -1,6 +1,6 @@
 .homeHero {
   color: #ffffff;
-  background-color: #ba3651;
+  background-color: var(--accentcolor);
   font-weight: bold;
 
   &_brand {
@@ -41,7 +41,7 @@
 
     &_subTitle {
       margin-top: -0.5em;
-      color: #ba3651;
+      color: var(--accentcolor);
     }
   }
 }
@@ -64,7 +64,7 @@
 
     &_eyecatch {
       height: 150px;
-      background-color: #ba3651;
+      background-color: var(--accentcolor);
       background-position: center center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -73,6 +73,10 @@
     &_meta {
       padding: 10px;
       background-color: #f0f0f0;
+      @include dark {
+        background-color: #1e1e1e;
+      }
+      
       &_labels {
         font-size: 0;
         span {
