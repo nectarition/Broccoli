@@ -42,6 +42,9 @@
     &_subTitle {
       margin-top: -0.5em;
       color: var(--accentcolor);
+      @include dark {
+        color: var(--darkaccentcolor);
+      }
     }
   }
 }
