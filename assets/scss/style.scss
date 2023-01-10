@@ -278,6 +278,7 @@ main {
       border-left: 8px solid var(--accentcolor);
       background-color: #f0f0f0;
       @include dark {
+        border-left: 8px solid var(--darkaccentcolor);
         background-color: #1e1e1e;
       }
 
