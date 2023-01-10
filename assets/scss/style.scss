@@ -9,7 +9,11 @@ body {
 header {
   padding: 50px;
   border-top: 4px solid #ba3651;
-  border-bottom: 2px solid #ba3651;
+  background-color: #f0f0f0;
+
+  @include mq {
+    padding: 35px;
+  }
 
   .brand {
     text-align: center;
@@ -17,7 +21,6 @@ header {
     &_message {
       padding-bottom: 5px;
       font-weight: bold;
-      letter-spacing: 0.13em;
     }
 
     &_logo img {
@@ -33,6 +36,10 @@ header {
     align-items: center;
     justify-content: center;
     gap: 50px;
+    @include mq {
+      flex-flow: wrap;
+      gap: 20px;
+    }
 
     li {
       display: inline-block;
@@ -78,6 +85,10 @@ main {
   .container {
     padding: 40px 25%;
     padding-bottom: 0;
+
+    @include mq {
+      padding: 20px;
+    }
   }
 
   ul {
@@ -150,8 +161,16 @@ main {
     grid-template-columns: 50% 50%;
     color: #404040;
 
+    @include mq {
+      display: block;
+    }
+
     &_prev, &_next {
       padding: 10px;
+      @include mq {
+        width: 100%;
+      }
+
       a {
         color: #404040;
         text-decoration: none;
@@ -159,7 +178,7 @@ main {
     }
     &_prev {
       grid-column: 1;
-
+      
       padding-left: 61px;
       text-align: left;
       background-color: #f8f8f8;
@@ -233,6 +252,10 @@ main {
     background-color: #1e1e1e;
     color: #ffffff;
 
+    @include mq {
+      padding: 20px;
+    }
+
     &_title {
       font-size: 2em;
       font-weight: bold;
@@ -258,9 +281,16 @@ main {
   .workList {
     &_item {
       margin-bottom: 20px;
-      height: 256px;
+      height: 496px;
+      @include mq {
+        height: 324px;
+      }
+
       position: relative;
       background-color: #808080;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
 
       &:last-child {
         margin-bottom: 0;
@@ -281,7 +311,7 @@ main {
 
         position: absolute;
         bottom: 0;
-        background-color: #ffffff80;
+        background-color: #ffffffa0;
 
         &_title a {
           font-size: 1.5em;
@@ -298,11 +328,13 @@ main {
   }
 
   .departmentList {
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 40px;
+    gap: 10px;
 
     &_item {
       display: inline-block;
-      margin-right: 5px;
       transition: box-shadow 0.1s linear;
       
       &:hover {
@@ -313,7 +345,10 @@ main {
 }
 
 footer {
+  margin-top: 40px;
+
   text-align: center;
+  background-color: #f0f0f0;
 
   .copyright {
     padding: 50px;
@@ -355,6 +390,15 @@ blockquote {
   padding-left: 1em;
   border-left: 0.5em solid #ba3651;
   background-color: #f0f0f0;
+}
+
+img {
+  margin-bottom: 20px;
+  width: 100%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .label {

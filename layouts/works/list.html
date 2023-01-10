@@ -8,7 +8,7 @@
     {{- partial "parts/departmentLabelList" . -}}
     {{ $Pages := where .Site.RegularPages "Type" "in" .Section }}
     {{ range $Pages }}
-      <div class="workList_item">
+      <div class="workList_item" style="background-image: url('{{ .Params.EyecatchURL }}');">
         <div class="workList_item_labels">
           {{- partial "parts/departmentLabel" ( index .Params.Departments 0 ) -}}
           <span class="label">{{ .Params.Date.Local.Format "2006.01" }}</span>

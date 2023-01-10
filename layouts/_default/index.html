@@ -1,19 +1,75 @@
 {{ define "main" }}
 <main>
-  <div class="container">
+  <div class="homeHero">
+    <div class="homeHero_brand">
+      <div class="homeHero_brand_subTitle">いろいろやります、</div>
+      <div class="homeHero_brand_title">ねくたりしょん。</div>
+      <div class="homeHero_brand_description">
+        染宮ねいろの活動知見を共有して、いい感じに成長していくサークル。
+      </div>
+    </div>
+  </div>
+  <div class="container homeStyle">
+    <div class="sectionHeader">
+      <div class="sectionHeader_title">Nectarition</div>
+      <div class="sectionHeader_subTitle">ねくたりしょんとは</div>
+    </div>
+    <blockquote>
+      染宮ねいろの突発的な趣味を共有して、何か作ったり作らなかったり、貢献したりしなかったり、入ってても何のメリットも得られないサークル
+    </blockquote>
     <p>
-      現在進行系で工事中です。
+      2020年12月14日に、染宮ねいろ個人の活動をさらに発展すべく設立したサークル。
+    </p>
+    <p>
+      当初は「何のメリットも得られないサークル」として活動していたが規模が大きくなってきたため、2023年1月に今後の活動を見据えた目標を設定。<br />
+      現在は「マインド: <b>いろいろやります。</b>」を掲げ日々活動中。
     </p>
 
-    <h2>記事一覧</h2>
-    
-    {{ $Pages := where .Site.RegularPages "Type" "in" .Site.Params.MainSections }}
-    {{ range $Pages }}
-      <div class="postList_item">
-        <div class="postList_item_title"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
-        <div class="postList_item_meta">{{ .Params.date.Local.Format "2006年01月02日 15時04分" }}</div>
-      </div>
-    {{ end }}
+    <div class="sectionHeader">
+      <div class="sectionHeader_title">Details</div>
+      <div class="sectionHeader_subTitle">なにをやるか</div>
+    </div>
+    <p>
+      主に以下の分野において活動を行っています。
+    </p>
+    <ul>
+      <li>Nectarition Blossom
+        <ul>
+          <li>同人誌即売会イベント企画・運営</li>
+        </ul>
+      </li>
+      <li>Nectarition Cherry-pick
+        <ul>
+          <li>システム開発・運用</li>
+        </ul>
+      </li>
+      <li>Nectarition Daylily
+        <ul>
+          <li>デザイン制作・研究</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="sectionHeader">
+      <div class="sectionHeader_title">Works</div>
+      <div class="sectionHeader_subTitle">やってきたこと</div>
+    </div>
+    {{ $Works := where .Site.RegularPages "Section" "in" "works" }}
+    <div class="workCard">
+      {{ range $Works }}
+        <div class="workCard_item">
+          <div class="workCard_item_eyecatch" style="background-image: url('{{ .Params.EyecatchURL }}');"></div>
+          <div class="workCard_item_meta">
+            <div class="workCard_item_meta_labels">
+              {{- partial "parts/departmentLabel" ( index .Params.Departments 0 ) -}}
+              <span class="label">{{ .Params.Date.Local.Format "2006.01" }}</span>
+            </div>
+            <div class="workCard_item_meta_title"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+            <div class="workCard_item_meta_description">{{ .Summary }}</div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
   </div>
 </main>
 {{ end }}
