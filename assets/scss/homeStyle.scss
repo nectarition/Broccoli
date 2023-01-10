@@ -51,8 +51,16 @@
   flex-wrap: wrap;
   gap: 10px;
 
+  @include mq {
+    flex-direction: row;
+    gap: 20px;
+  }
+
   &_item {
     width: calc(50% - 5px);
+    @include mq {
+      width: 100%;
+    }
 
     &_eyecatch {
       height: 150px;
