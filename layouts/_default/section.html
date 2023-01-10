@@ -1,0 +1,11 @@
+{{ define "main" }}
+<main>
+  <div class="hero">
+    <div class="hero_title">{{ .Title }}</div>
+    <div class="hero_description">{{ .Params.SubTitle }}</div>
+  </div>
+  <div class="container">
+    {{ .Content }}
+  </div>
+</main>
+{{ end }}

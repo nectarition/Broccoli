@@ -1,0 +1,34 @@
+{{ define "main" }} {{ $IsPost := eq .Type "posts" }}
+<main>
+  <div class="container">
+    <ul class="breadcrumbs">
+      <li><a href="{{ .Site.BaseURL | relLangURL }}">ホーム</a></li>
+      {{ if $IsPost }}<li><a href="{{ .Site.BaseURL }}posts">ブログ</a></li>{{ end }}
+      <li>{{ .Title }}</li>
+    </ul>
+    <div class="postMeta">
+      <h1>{{ .Title }}</h1>
+      <time>{{ .Params.date.Local.Format "2006年1月2日 15:04"}}</time>
+    </div>
+    <article>
+      {{ .Content }}
+    </article>
+  {{ if $IsPost }}
+    <nav class="postPager">
+  {{ with .PrevInSection }}
+      <div class="postPager_prev">
+        <div class="postPager_direction">PREVIOUS</div>
+        <div class="postPager_title"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></div>
+      </div>
+  {{ end }}
+  {{ with .NextInSection }}
+      <div class="postPager_next">
+        <div class="postPager_direction">NEXT</div>
+        <div class="postPager_title"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></div>
+      </div>
+  {{ end }}
+    </nav>
+  {{ end }}
+  </div>
+</main>
+{{ end }}

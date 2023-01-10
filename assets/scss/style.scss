@@ -1,0 +1,380 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+header {
+  padding: 50px;
+  border-top: 4px solid #ba3651;
+  border-bottom: 2px solid #ba3651;
+
+  .brand {
+    text-align: center;
+    
+    &_message {
+      padding-bottom: 5px;
+      font-weight: bold;
+      letter-spacing: 0.13em;
+    }
+
+    &_logo img {
+      width: 196px;
+    }
+  }
+
+  ul.menu {
+    display: flex;
+    margin-top: 20px;
+    
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    li {
+      display: inline-block;
+      margin-bottom: -10px;
+      padding-bottom: 10px;
+
+      font-weight: bold;
+      position: relative;
+
+      a {
+        color: #404040;
+        text-decoration: none;
+      }
+
+      &::before {
+        display: inline-block;
+        position: absolute;
+        width: 0;
+        left: 0;
+        bottom: 0;
+        border-bottom: 2px solid #ba3651;
+        content: '';
+
+        transition: width ease-in-out 200ms;
+      }
+
+      &:has(a[class="active"]),
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+      &:has(a[class="active"]) {
+        a {
+          color: #ba3651;
+        }
+      }
+    }
+  }
+}
+
+main {
+  .container {
+    padding: 40px 25%;
+    padding-bottom: 0;
+  }
+
+  ul {
+    margin-bottom: 20px;
+    padding-left: 1em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    li {
+      margin-bottom: 1em;
+      &::before {
+        content: '・';
+      }
+    }
+  }
+
+  ul.breadcrumbs {
+    margin-bottom: 20px;;
+    padding: 10px;
+    background-color: #f0f0f0;
+
+    a {
+      color: #404040;
+      text-decoration: none;
+    }
+    
+    li {
+      display: inline;
+      position: relative;
+      padding-right: 1.5em;
+
+      &::before {
+        content: '';
+      }
+
+      &::after {
+        display: inline-block;
+        position: absolute;
+        top: calc(50% - 0.25em);
+        right: 0.5em;
+        content: '';
+        width: 7px;
+        height: 7px;
+        transform: rotate(-45deg);
+        border-bottom: 2px solid #404040;
+        border-right: 2px solid #404040;
+      }
+    }
+    li:last-child {
+      color: #ba3651;
+      font-weight: bold;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  .postMeta {
+    margin-bottom: 20px;
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+  article {
+    margin-bottom: 20px;
+  }
+
+  .postPager {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: #404040;
+
+    &_prev, &_next {
+      padding: 10px;
+      a {
+        color: #404040;
+        text-decoration: none;
+      }
+    }
+    &_prev {
+      grid-column: 1;
+
+      padding-left: 61px;
+      text-align: left;
+      background-color: #f8f8f8;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        display: inline-block;
+        content: '';
+        width: 12px;
+        height: 12px;
+        top: 40%;
+        left: 26px;
+        border-bottom: #404040 3px solid;
+        border-left: #404040 3px solid;
+        transform: rotate(45deg);
+      }
+    }
+    &_next {
+      grid-column: 2;
+
+      padding-right: 61px;
+      text-align: right;
+      background-color: #f0f0f0;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        display: inline-block;
+        content: '';
+        width: 12px;
+        height: 12px;
+        top: 40%;
+        right: 26px;
+        border-top: #404040 3px solid;
+        border-right: #404040 3px solid;
+        transform: rotate(45deg);
+      }
+    }
+
+    &_direction {
+      font-size: 0.75em;
+    }
+    &_title {
+      font-weight: bold;
+    }
+  }
+
+  .postList {
+    &_item {
+      margin-bottom: 20px;
+      padding: 10px;
+      border-left: 8px solid #ba3651;
+      background-color: #f0f0f0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &_title {
+        font-weight: bold;
+      }
+      &_meta {
+
+      }
+    }
+  }
+
+  .hero {
+    padding: 50px 25%;
+    background-color: #1e1e1e;
+    color: #ffffff;
+
+    &_title {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    &_description {
+      .breadcrumbs { 
+        margin-bottom: 10px;
+        padding: 0;
+        background-color: transparent;
+        li {
+          a {
+            color: #ffffff;
+          }
+          &::after {
+            border-bottom: 2px solid #ffffff;
+            border-right: 2px solid #ffffff;
+          }
+        }
+      }
+    }
+  }
+
+  .workList {
+    &_item {
+      margin-bottom: 20px;
+      height: 256px;
+      position: relative;
+      background-color: #808080;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &_labels {
+        position: absolute;
+        top: 0;
+        font-size: 0;
+        span {
+          font-size: 1rem;
+        }
+      }
+
+      &_meta {
+        width: 100%;
+        padding: 10px;
+
+        position: absolute;
+        bottom: 0;
+        background-color: #ffffff80;
+
+        &_title a {
+          font-size: 1.5em;
+          font-weight: bold;
+        }
+        &_subTitle {
+  
+        }
+        &_description {
+  
+        }
+      }
+    }
+  }
+
+  .departmentList {
+    margin-bottom: 40px;
+
+    &_item {
+      display: inline-block;
+      margin-right: 5px;
+      transition: box-shadow 0.1s linear;
+      
+      &:hover {
+        box-shadow: 0 2px 10px #00000088;
+      }
+    }
+  }
+}
+
+footer {
+  text-align: center;
+
+  .copyright {
+    padding: 50px;
+    color: #1e1e1e;
+  }
+  .logo {
+    img {
+      width: 32px;
+    }
+    padding: 50px;
+    padding-top: 0;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 20px;
+}
+
+h2, h3, h4, h5, h6 {
+  color: #ba3651;
+}
+
+p {
+  margin-bottom: 20px;
+  line-height: 2em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: #ba3651;
+  text-decoration: none;
+}
+
+blockquote {
+  margin-bottom: 20px;
+  padding: 10px;
+  padding-left: 1em;
+  border-left: 0.5em solid #ba3651;
+  background-color: #f0f0f0;
+}
+
+.label {
+  display: inline-block;
+  padding: 5px;
+  background-color: #404040;
+  color: #ffffff;
+
+  &_department {
+    &-acerola {
+      background-color: #ba3651;
+    }
+    &-blossom {
+      background-color: #428cd1;
+    }
+    &-cherrypick {
+      background-color: #38ac38;
+    }
+    &-daylily {
+      background-color: #b3a73e;
+    }
+  }
+}
