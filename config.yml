@@ -14,7 +14,7 @@ menu:
     - name: 'ABOUT'
       weight: 10
       identifier: 'about'
-      url: '/'
+      url: '/about/'
     - name: 'WORKS'
       weight: 20
       identifier: 'works'
