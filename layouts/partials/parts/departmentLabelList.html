@@ -1,6 +1,6 @@
 <div class="departmentList">
   {{ range $Key, $Value := site.Taxonomies.departments }}
-    <a class="departmentList_item" href="{{ site.BaseURL }}departments/{{ $Key }}">
+    <a class="departmentList_item" href="{{ site.BaseURL }}/departments/{{ $Key }}">
       {{- partial "parts/departmentLabel" $Key -}}
     </a>
   {{ end }}

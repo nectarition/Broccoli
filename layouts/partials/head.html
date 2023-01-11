@@ -7,11 +7,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="{{ .Site.Title }}" />
 <meta property="og:title" content="{{ .Title }}" />
+{{ if and .IsPage (.Params.EyecatchURL) }}
+<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.EyecatchURL }}" />
+{{ else }}
 <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.card }}" />
-{{ $isPosts := eq .Type "posts" }} {{ if $isPosts }}
-<meta
-  property="og:description"
-  content="{{ if not .Site.Params.disableSummary }} {{ .Summary | safeHTML }} {{ end }}" />
+{{ end }}
+{{ with .Summary }}
+<meta property="og:description" content="{{ . }}" />
 {{ end }}
 <meta property="article:author" content="{{ .Site.Params.author }}">
 <meta property="article:section" content="posts" />
