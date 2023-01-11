@@ -207,6 +207,14 @@ main {
     }
   }
 
+  hr {
+    margin-bottom: 20px;
+    border: 1px solid var(--bgcolor);
+    @include dark {
+      border: 1px solid var(--textcolor);
+    }
+  }
+
   .postPager {
     display: grid;
     grid-template-columns: 50% 50%;
