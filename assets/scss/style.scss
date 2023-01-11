@@ -425,10 +425,10 @@ main {
         content: '';
         position: absolute;
         background-color: var(--accentcolor);
-        top: calc(50% - 0.5em);
-        left: -0.4em;
-        width: 1em;
-        height: 1em;
+        top: calc(50% - 8px);
+        left: -7px;
+        width: 16px;
+        height: 16px;
         border-radius: 50%;
         @include dark {
           background-color: var(--darkaccentcolor);
@@ -445,8 +445,11 @@ main {
         font-weight: bold;
         font-size: 1.25em;
       }
-      &_remarks {}
-      &_date {}
+      &_remarks {
+        color: #808080;
+      }
+      &_date {
+      }
     }
   }
 }
@@ -459,7 +462,44 @@ footer {
   @include dark {
     background-color: #d0d0d0;
   }
+  .share {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px 25%;
+    @include mq {
+      padding: 20px;
+    }
+    background-color: #1e1e1e;
 
+    &_text, &_button 
+    {
+    }
+
+    &_title {
+      &_item {
+        position: relative;
+        vertical-align: middle;
+        &::before, &::after {
+          position: absolute;
+          vertical-align: middle;
+          border-left: 2px solid #ffffff;
+          display: inline-block;
+          top: 2px;
+          content: '';
+          height: 1.25em;
+        }
+        &::before {
+          left: -16px;
+          transform: rotate(-45deg);
+        }
+        &::after {
+          right: -16px;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
   .copyright {
     padding: 50px;
     color: #1e1e1e;
