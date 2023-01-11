@@ -397,6 +397,58 @@ main {
       }
     }
   }
+
+  .histories {
+
+    li {
+      margin: 0;
+      padding: 10px;
+      padding-left: 20px;
+
+      position: relative;
+
+      &::before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        border-left: 2px solid var(--accentcolor);
+        @include dark {
+          border-left:  2px solid var(--darkaccentcolor);
+        }
+      }
+
+      &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        background-color: var(--accentcolor);
+        top: calc(50% - 0.5em);
+        left: -0.4em;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        @include dark {
+          background-color: var(--darkaccentcolor);
+        }
+      }
+
+      &:first-child::before {
+        top: 50%;
+      }
+      
+    }
+    &_item {
+      &_content {
+        font-weight: bold;
+        font-size: 1.25em;
+      }
+      &_remarks {}
+      &_date {}
+    }
+  }
 }
 
 footer {
