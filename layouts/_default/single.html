@@ -2,8 +2,8 @@
 <main>
   <div class="container">
     <ul class="breadcrumbs">
-      <li><a href="{{ .Site.BaseURL | relLangURL }}">ホーム</a></li>
-      {{ if $IsPost }}<li><a href="{{ .Site.BaseURL }}/posts">ブログ</a></li>{{ end }}
+      <li><a href="{{ site.BaseURL }}">ホーム</a></li>
+      {{ if $IsPost }}<li><a href="{{ site.BaseURL }}/posts">ブログ</a></li>{{ end }}
       <li>{{ .Title }}</li>
     </ul>
     <div class="postMeta">
