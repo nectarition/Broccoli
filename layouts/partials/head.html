@@ -3,21 +3,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href=" {{ $styles.Permalink }} " />
 
-<meta property="og:title" content="{{ .Title }}" />
-<meta property="og:image" content=" {{ .Site.Params.icon }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:type" content="article" />
 <meta property="og:site_name" content="{{ .Site.Title }}" />
-{{ hugo.Generator }} {{ $isPosts := eq .Type "posts" }} {{ if $isPosts }}
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.card }}" />
+{{ $isPosts := eq .Type "posts" }} {{ if $isPosts }}
 <meta
   property="og:description"
-  content="{{ if not .Site.Params.disableSummary }} {{ .Summary | safeHTML }} {{ end
-}}"
-/>
-<meta property="og:type" content="article" />
-<meta property="og:url" content="{{ .Permalink }}" />
-<meta property="article:section" content="posts" />
+  content="{{ if not .Site.Params.disableSummary }} {{ .Summary | safeHTML }} {{ end }}" />
 {{ end }}
+<meta property="article:author" content="{{ .Site.Params.author }}">
+<meta property="article:section" content="posts" />
 
-<meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@nectarition" />
+<meta name="twitter:creator" content="@nirsmmy" />
+
+{{ hugo.Generator }} 
 
 <title>
   {{ if and (.Title) (not .IsHome) }}{{ .Title }} - {{ end }}{{ .Site.Title }}
