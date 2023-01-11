@@ -471,7 +471,6 @@ footer {
       padding: 20px;
     }
     background-color: #1e1e1e;
-    color: #ffffff;
 
     &_text, &_button 
     {
@@ -481,6 +480,8 @@ footer {
       &_item {
         position: relative;
         vertical-align: middle;
+        color: #ffffff;
+        
         &::before, &::after {
           position: absolute;
           vertical-align: middle;
