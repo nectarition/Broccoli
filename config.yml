@@ -3,6 +3,7 @@ languageCode: 'ja-JP'
 title: 'ねくたりしょん / Nectarition'
 
 params:
+  defaultDescription: 'いろいろやります、ねくたりしょん。'
   author: 'Nectarition'
   authorPersonalName: '染宮ねいろ'
   logo: '/logo.png'

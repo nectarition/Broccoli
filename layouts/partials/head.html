@@ -6,15 +6,13 @@
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="{{ .Site.Title }}" />
-<meta property="og:title" content="{{ .Title }}" />
-{{ if and .IsPage (.Params.EyecatchURL) }}
-<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.EyecatchURL }}" />
-{{ else }}
-<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.card }}" />
-{{ end }}
-{{ with .Summary }}
-<meta property="og:description" content="{{ . }}" />
-{{ end }}
+{{ if .Title }}<meta property="og:title" content="{{ .Title }}" />
+{{ else }}<meta property="og:title" content="{{ .Site.Title }}" />{{ end }}
+{{ if and .IsPage (.Params.EyecatchURL) }}<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.EyecatchURL }}" />
+{{ else }}<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.card }}" />{{ end }}
+{{ if .Summary }}<meta property="og:description" content="{{ .Summary }}" />
+{{ else }}<meta property="og:description" content="{{ .Site.Params.defaultDescription }}" />{{ end }}
+
 <meta property="article:author" content="{{ .Site.Params.author }}">
 <meta property="article:section" content="posts" />
 
