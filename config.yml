@@ -5,8 +5,8 @@ title: 'ねくたりしょん / Nectarition'
 params:
   author: 'Nectarition'
   authorPersonalName: '染宮ねいろ'
-  logo: 'logo.png'
-  card: 'card.jpg'
+  logo: '/logo.png'
+  card: '/card.jpg'
 
 taxonomies:
   department: 'departments'
