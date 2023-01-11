@@ -180,6 +180,28 @@ main {
     margin-bottom: 20px;
   }
 
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    
+    th, td {
+      padding: 5px 10px;
+    }
+
+    thead {
+      border-bottom: 2px solid #1e1e1e;
+    }
+    tbody {
+      tr:nth-child(2n) {
+        background-color: #00000008;
+        @include dark {
+          background-color: #ffffff08;
+        }
+      }
+    }
+  }
+
   .postPager {
     display: grid;
     grid-template-columns: 50% 50%;
