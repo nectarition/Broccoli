@@ -1,5 +1,5 @@
 +++
-Draft = true
+Draft = false
 Title = 'Virtual Voice Harmony'
 SubTitle = 'ロゴ, フライヤーデザイン'
 EyecatchURL = '/works/eyecatch/vvharmony.jpg'
@@ -8,6 +8,11 @@ departments = ['daylily']
 
 +++
 
+ロゴとフライヤーをデザインしました。
+
 <!--more-->
 
-# Virtual Voice Harmony
+## 関連リンク
+
+- [運営Twitterアカウント](https://twitter.com/vv_harmony)
+- [フライヤー](https://twitter.com/VV_Harmony/status/1611529163101589505)
