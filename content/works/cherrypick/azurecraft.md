@@ -7,7 +7,7 @@ departments = ['cherrypick']
 
 +++
 
-Microsoft Azure研究活動です。
+Azure Virtual Machines周りの研究活動です。
 
 <!--more-->
 

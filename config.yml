@@ -8,6 +8,8 @@ params:
   authorPersonalName: '染宮ねいろ'
   logo: '/logo.png'
   card: '/card.jpg'
+  mainSections:
+    - posts
 
 taxonomies:
   department: 'departments'
