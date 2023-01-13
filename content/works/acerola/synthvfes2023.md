@@ -2,7 +2,7 @@
 Title = 'Synthesizer V Unofficial Festival 2023'
 SubTitle = '楽曲投稿祭の開催'
 EyecatchURL = '/works/eyecatch/svf2023.jpg'
-Date = 2022-02-03T15:00:00Z
+Date = 2023-02-03T15:00:00Z
 departments = ['acerola']
 
 +++
