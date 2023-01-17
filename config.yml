@@ -1,34 +1,38 @@
-baseURL: 'https://nectarition.jp'
-languageCode: 'ja-JP'
-title: 'ねくたりしょん / Nectarition'
+baseURL: "https://nectarition.jp"
+languageCode: "ja-JP"
+title: "ねくたりしょん / Nectarition"
 
 params:
-  defaultDescription: 'いろいろやります、ねくたりしょん。'
-  author: 'Nectarition'
-  authorPersonalName: '染宮ねいろ'
-  logo: '/logo.png'
-  card: '/card.jpg'
+  defaultDescription: "いろいろやります、ねくたりしょん。"
+  author: "Nectarition"
+  authorPersonalName: "染宮ねいろ"
+  logo: "/logo.png"
+  card: "/card.jpg"
   mainSections:
     - posts
 
 taxonomies:
-  department: 'departments'
+  department: "departments"
 
 menu:
   main:
-    - name: 'ABOUT'
+    - name: "ABOUT"
       weight: 1
-      identifier: 'about'
-      url: '/about/'
-    - name: 'WORKS'
+      identifier: "about"
+      url: "/about/"
+    - name: "WORKS"
       weight: 10
-      identifier: 'works'
-      url: '/works/'
-    - name: 'POSTS'
+      identifier: "works"
+      url: "/works/"
+    - name: "POSTS"
       weight: 20
-      identifier: 'posts'
-      url: '/posts/'
-    - name: 'CONTACTS'
+      identifier: "posts"
+      url: "/posts/"
+    - name: "CONTACTS"
       weight: 30
-      identifier: 'contacts'
-      url: '/contacts/'
+      identifier: "contacts"
+      url: "/contacts/"
+    - name: "NOTE"
+      weight: 40
+      identifier: "note"
+      url: "https://note.com/nectarition"
