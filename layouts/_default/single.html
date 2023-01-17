@@ -3,7 +3,7 @@
   <div class="container">
     <ul class="breadcrumbs">
       <li><a href="{{ site.BaseURL }}">ホーム</a></li>
-      {{ if $IsPost }}<li><a href="{{ site.BaseURL }}/posts">ブログ</a></li>{{ end }}
+      <li><a href="{{ site.BaseURL }}/{{ .Section }}">{{ .CurrentSection.Params.Title }}</a></li>
       <li>{{ .Title }}</li>
     </ul>
     <div class="postMeta">
@@ -13,22 +13,20 @@
     <article>
       {{ .Content }}
     </article>
-  {{ if $IsPost }}
     <nav class="postPager">
-  {{ with .PrevInSection }}
-      <div class="postPager_prev">
-        <div class="postPager_direction">PREVIOUS</div>
-        <div class="postPager_title"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></div>
-      </div>
-  {{ end }}
-  {{ with .NextInSection }}
-      <div class="postPager_next">
-        <div class="postPager_direction">NEXT</div>
-        <div class="postPager_title"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></div>
-      </div>
-  {{ end }}
+    {{ with .PrevInSection }}
+        <div class="postPager_prev">
+          <div class="postPager_direction">PREVIOUS</div>
+          <div class="postPager_title"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></div>
+        </div>
+    {{ end }}
+    {{ with .NextInSection }}
+        <div class="postPager_next">
+          <div class="postPager_direction">NEXT</div>
+          <div class="postPager_title"><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></div>
+        </div>
+    {{ end }}
     </nav>
-  {{ end }}
   </div>
 </main>
 {{ end }}
