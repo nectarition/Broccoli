@@ -32,7 +32,11 @@ menu:
       weight: 30
       identifier: "contacts"
       url: "/contacts/"
-    - name: "NOTE"
+    - name: "LEADER"
       weight: 40
+      identifier: "leader"
+      url: "/leader/"
+    - name: "NOTE"
+      weight: 50
       identifier: "note"
       url: "https://note.com/nectarition"
