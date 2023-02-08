@@ -20,22 +20,22 @@ menu:
       weight: 1
       identifier: "about"
       url: "/about/"
-    - name: "WORKS"
+    - name: "LEADER"
       weight: 10
+      identifier: "leader"
+      url: "/leader/"
+    - name: "WORKS"
+      weight: 20
       identifier: "works"
       url: "/works/"
     - name: "POSTS"
-      weight: 20
+      weight: 30
       identifier: "posts"
       url: "/posts/"
     - name: "CONTACTS"
-      weight: 30
+      weight: 40
       identifier: "contacts"
       url: "/contacts/"
-    - name: "LEADER"
-      weight: 40
-      identifier: "leader"
-      url: "/leader/"
     - name: "NOTE"
       weight: 50
       identifier: "note"
