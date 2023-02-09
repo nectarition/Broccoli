@@ -590,6 +590,14 @@ blockquote {
   }
 }
 
+textarea {
+  width: auto;
+  &.fixed-height {
+    height: 25vh;
+    resize: none;
+  }
+}
+
 img {
   margin-bottom: 20px;
   width: 100%;
