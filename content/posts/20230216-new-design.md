@@ -1,5 +1,5 @@
 +++
-date = 2023-02-17T12:00:00Z
+date = 2023-02-16T12:00:00Z
 disableSummary = false
 title = "Webサイトをリニューアルしました"
 
