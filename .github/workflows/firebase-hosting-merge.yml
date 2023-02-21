@@ -2,10 +2,12 @@
 # https://github.com/firebase/firebase-tools
 
 name: Deploy to Firebase Hosting on merge
-'on':
+on:
   push:
     branches:
       - master
+  schedule:
+    - cron: "0 3 * * *"
 env:
   TZ: Asia/Tokyo
 jobs:
@@ -16,7 +18,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          hugo-version: "latest"
           extended: true
       - run: hugo
       - uses: actions/upload-pages-artifact@v1
