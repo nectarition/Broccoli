@@ -93,6 +93,7 @@ export default config
 
 - [AstroSakura-KYT.yml](https://github.com/nectarition/SakuraContent/blob/main/.github/workflows/AstroSakura-KYT.yml)を参考にワークフローファイルを作成する。
 - ファイル名はコンテキスト管理リポジトリ名と合わせておく
+- `name` を `🌏 Deploy content to AstroSakura-XXX` に
 - `on.push.paths` のパスを `contents/AstroSakura-XXX/**` に
 - `env.CNAME` を Webサイトを公開するドメインに
 - `env.REPOSITORY` を `AstroSakura-XXX` に
