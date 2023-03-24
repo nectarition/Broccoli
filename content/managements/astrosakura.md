@@ -116,7 +116,8 @@ export default config
   | /pages
   | ` index.md
   ` /assets
-    ` 必要なアセット(/assets以下がそのまま公開ディレクトリのパスとなります)
+    | 必要なアセット(/assets以下がそのまま公開ディレクトリのパスとなります)
+    ` example.png (これが https://example.com/example.png でアクセスできる)
 ```
 
 ### 仮デプロイ
