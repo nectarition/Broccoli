@@ -77,5 +77,5 @@ SAIGUSA Tomotada
 
 - [RawPostData](/raw/20231110-change-key/RawPostData)
 - [NewKey.asc](/raw/20231110-change-key/NewKey.asc)
-- [SignNewKey.asc](/raw/20231110-change-key/SignNewKey.asc)
-- [SignOldKey.asc](/raw/20231110-change-key/SignOldKey.asc)
+- [NewKey.sig.asc](/raw/20231110-change-key/NewKey.sig.asc)
+- [OldKey.sig.asc](/raw/20231110-change-key/OldKey.sig.asc)
