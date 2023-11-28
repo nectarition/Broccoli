@@ -1,15 +1,14 @@
 +++
-date = 2023-11-30T03:00:00Z
+date = 2023-11-28T06:00:00Z
 title = "芽宮ねいをご紹介します"
 disableSummary = false
 +++
-
 
 「わたしのこと、もっと知ってください！」
 
 <!--more-->
 
-![](/eyecatch/posts/20231130-nectari-co.png)
+![](/eyecatch/posts/20231128-nectari-co.png)
 
 この度、ねくたりしょんイメージキャラクター「芽宮ねい(ねくたり子)」のビジュアルを制作いたしました！
 
