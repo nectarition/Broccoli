@@ -1,3 +1,8 @@
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 baseURL: "https://nectarition.jp"
 languageCode: "ja-JP"
 title: "ねくたりしょん / Nectarition"
