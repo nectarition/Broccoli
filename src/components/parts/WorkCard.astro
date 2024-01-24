@@ -1,0 +1,59 @@
+---
+import dayjs from "dayjs";
+
+export interface Props {
+  slug: string;
+  title: string;
+  description: string;
+  date: Date;
+}
+
+const props = Astro.props;
+---
+
+<div class="card" style={`background-image: url('/works/${props.slug}.jpg');`}>
+  <div class="card_header">
+    <span class="label">{dayjs(props.date).format("YYYY.MM")}</span>
+  </div>
+  <div class="card_content">
+    <div class="card_title">
+      <a href={`/works/${props.slug}`}>{props.title}</a>
+    </div>
+    <div class="card_description">{props.description}</div>
+  </div>
+</div>
+
+<style lang="scss">
+  .card {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    height: 100%;
+
+    background-color: var(--bgwhite-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 256px;
+
+    &_content {
+      padding: 10px;
+      background-color: #ffffffc0;
+    }
+    &_title {
+      font-size: 1.25em;
+      font-weight: bold;
+      a {
+        text-decoration: none;
+      }
+    }
+    &_description {
+    }
+  }
+
+  .label {
+    display: inline-block;
+    padding: 5px;
+    background-color: var(--bgdark-color);
+    color: var(--white-color);
+  }
+</style>

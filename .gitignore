@@ -1,2 +1,4 @@
+.astro/
+dist/
 resources/_gen/
-public/
+node_modules/

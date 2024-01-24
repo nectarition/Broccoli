@@ -1,0 +1,56 @@
+---
+import "../styles/main.scss";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  thumbnailPath?: string;
+}
+
+const props = Astro.props;
+const pageTitle = props.title
+  ? `${props.title} - ねくたりしょん`
+  : "ねくたりしょん";
+const siteURL = "https://nectarition.jp";
+const imageURL = `${siteURL}${props.thumbnailPath ?? `/assets/brand/card.jpg`}`;
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="generator" content="Nectarition Broccoli v2.0" />
+    {
+      props.description && (
+        <meta name="description" content={props.description} />
+      )
+    }
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:site_name" content="ねくたりしょん" />
+    <meta property="og:image" content={imageURL} />
+    <meta property="og:url" content={siteURL} />
+    {
+      props.description && (
+        <meta property="og:description" content={props.description} />
+      )
+    }
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@nectarition" />
+    <meta name="twitter:title" content={pageTitle} />
+    {
+      props.description && (
+        <meta name="twitter:description" content={props.description} />
+      )
+    }
+    <meta name="twitter:image" content={imageURL} />
+    <title>{pageTitle}</title>
+    <script>
+      import lenis from "../scripts/lenis";
+      lenis.initializeLenis();
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

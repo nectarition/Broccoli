@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/parts/Breadcrumbs.astro";
+import PageTitle from "../components/parts/PageTitle.astro";
+
+export const getStaticPaths = async () => {
+  const posts = await getCollection("pages");
+  return posts.map((e) => ({
+    params: { slug: e.slug },
+    props: { page: e },
+  }));
+};
+
+const { page } = Astro.props;
+const { Content } = await page.render();
+---
+
+<BaseLayout title={page.data.title} description={page.data.description}>
+  <Breadcrumbs
+    items={[
+      {
+        title: "Home",
+        path: "/",
+      },
+    ]}
+  />
+  <PageTitle title={page.data.title} description={page.data.description} />
+  <Content />
+</BaseLayout>

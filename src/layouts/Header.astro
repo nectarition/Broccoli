@@ -1,0 +1,81 @@
+---
+import config from "../config";
+---
+
+<div>
+  <div id="brand">
+    <div id="logotype">
+      <img src="/assets/brand/logotype.svg" class="logotype" />
+    </div>
+    <div id="catchcopy">いろいろやります、ねくたりしょん。</div>
+  </div>
+  <ul id="menu">
+    {
+      config.menu.map((i) => (
+        <li class="menu_item">
+          <a class="menu_item_link" href={i.path}>
+            {i.title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style lang="scss">
+  #brand {
+    margin-bottom: 10px;
+  }
+  #catchcopy {
+    font-size: 0.7em;
+  }
+  .logotype {
+    height: 24px;
+  }
+  #menu {
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    gap: 5px 10px;
+    flex-wrap: wrap;
+
+    .menu_item {
+      display: inline-block;
+
+      &_link {
+        display: inline-block;
+        padding: 5px;
+
+        text-decoration: none;
+        border-bottom: 1px solid var(--primary-brand-color);
+
+        z-index: 0;
+        position: relative;
+        transition: color 0.2s;
+
+        &::after {
+          content: "";
+          width: 0;
+          height: 100%;
+          top: 0;
+          left: 0;
+
+          position: absolute;
+          z-index: -5;
+          background-color: var(--primary-brand-color);
+
+          transition: width 0.2s ease;
+        }
+
+        &:hover {
+          color: #ffffff;
+
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+</style>

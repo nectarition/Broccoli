@@ -1,0 +1,12 @@
+---
+import { getEntry } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const page = await getEntry("pages", "index");
+const { Content } = await page.render();
+---
+
+<BaseLayout>
+  index
+  <Content />
+</BaseLayout>

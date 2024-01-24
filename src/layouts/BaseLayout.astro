@@ -1,0 +1,60 @@
+---
+import Root from "./Root.astro";
+import Footer from "./Footer.astro";
+import Header from "./Header.astro";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  thumbnailPath?: string;
+}
+
+const props = Astro.props;
+---
+
+<Root
+  title={props.title}
+  description={props.description}
+  thumbnailPath={props.thumbnailPath}
+>
+  <div id="wrap">
+    <nav id="nav">
+      <Header />
+    </nav>
+    <main id="main">
+      <slot />
+    </main>
+    <footer id="footer">
+      <Footer />
+    </footer>
+  </div>
+</Root>
+
+<style lang="scss">
+  #wrap {
+    min-height: 100%;
+    border: 10px solid var(--primary-brand-color);
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+
+    padding: 20px 20%;
+
+    @media screen and (max-width: 840px) {
+      padding: 20px;
+    }
+  }
+
+  #nav {
+    padding: 20px 0;
+  }
+
+  #main {
+  }
+
+  #footer {
+    padding-top: 20px;
+    border-top: 2px solid var(--border-color);
+  }
+</style>
