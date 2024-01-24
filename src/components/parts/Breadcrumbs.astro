@@ -1,0 +1,48 @@
+---
+export interface Props {
+  items: {
+    title: string;
+    path: string;
+  }[];
+}
+---
+
+<ul class="breadcrumbs">
+  {
+    Astro.props.items.map((i) => (
+      <li>
+        <a href={i.path}>{i.title}</a>
+      </li>
+    ))
+  }
+</ul>
+
+<style lang="scss">
+  .breadcrumbs {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+
+    list-style: none;
+
+    li {
+      display: inline-block;
+      padding-right: 24px;
+
+      position: relative;
+
+      &::after {
+        position: absolute;
+        display: inline-block;
+        content: "";
+        width: 8px;
+        height: 8px;
+        bottom: 6px;
+        right: 10px;
+        border-right: 2px solid var(--lightgray-color);
+        border-bottom: 2px solid var(--lightgray-color);
+        transform: rotate(-45deg);
+      }
+    }
+  }
+</style>

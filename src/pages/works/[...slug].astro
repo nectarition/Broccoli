@@ -1,0 +1,37 @@
+---
+import { getCollection } from "astro:content";
+import Breadcrumbs from "../../components/parts/Breadcrumbs.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageTitle from "../../components/parts/PageTitle.astro";
+
+export const getStaticPaths = async () => {
+  const works = await getCollection("works");
+  return works.map((e) => ({
+    params: { slug: e.slug },
+    props: { entry: e },
+  }));
+};
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<BaseLayout title={entry.data.title}>
+  <Breadcrumbs
+    items={[
+      {
+        title: "Home",
+        path: "/",
+      },
+      {
+        title: "Works",
+        path: "/works",
+      },
+    ]}
+  />
+  <PageTitle title={entry.data.title} />
+  <p>
+    <img src={`/works/${entry.slug}.jpg`} />
+  </p>
+  <Content />
+</BaseLayout>

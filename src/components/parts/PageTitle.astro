@@ -1,0 +1,42 @@
+---
+import dayjs from "dayjs";
+
+export interface Props {
+  title: string;
+  date?: Date;
+  description?: string;
+}
+---
+
+<div class="pageTitle">
+  <h1 class="pageTitle_title">{Astro.props.title}</h1>
+  {
+    Astro.props.date && (
+      <div class="pageTitle_meta">
+        {dayjs(Astro.props.date).format("YYYY年 M月 D日")} 更新
+      </div>
+    )
+  }
+  {
+    Astro.props.description && (
+      <div class="pageTitle_meta">{Astro.props.description}</div>
+    )
+  }
+</div>
+
+<style lang="scss">
+  .pageTitle {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+
+    display: grid;
+    gap: 5px;
+
+    &_title {
+      margin: 0;
+    }
+    &_meta {
+    }
+  }
+</style>

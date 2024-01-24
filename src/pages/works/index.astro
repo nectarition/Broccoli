@@ -1,0 +1,48 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/parts/Breadcrumbs.astro";
+import PageTitle from "../../components/parts/PageTitle.astro";
+import WorkCard from "../../components/parts/WorkCard.astro";
+
+const works = await getCollection("works");
+const sortedWorks = works.sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+---
+
+<BaseLayout title="Works">
+  <Breadcrumbs
+    items={[
+      {
+        title: "Home",
+        path: "/",
+      },
+    ]}
+  />
+  <PageTitle title="Works" description="ねくたりしょんは、いろいろやります。" />
+  <div class="cardRack">
+    {
+      sortedWorks.map((i) => (
+        <WorkCard
+          slug={i.slug}
+          title={i.data.title}
+          description={i.data.description}
+          date={i.data.date}
+        />
+      ))
+    }
+  </div>
+</BaseLayout>
+
+<style lang="scss">
+  .cardRack {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+
+    @media screen and (max-width: 840px) {
+      grid-template-columns: auto;
+    }
+  }
+</style>
