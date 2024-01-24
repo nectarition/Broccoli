@@ -8,15 +8,19 @@ export const getStaticPaths = async () => {
   const works = await getCollection("works");
   return works.map((e) => ({
     params: { slug: e.slug },
-    props: { entry: e },
+    props: { page: e },
   }));
 };
 
-const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { page } = Astro.props;
+const { Content } = await page.render();
 ---
 
-<BaseLayout title={entry.data.title}>
+<BaseLayout
+  title={page.data.title}
+  thumbnailPath={`/works/${page.slug}.png`}
+  description={page.data.description}
+>
   <Breadcrumbs
     items={[
       {
@@ -29,9 +33,9 @@ const { Content } = await entry.render();
       },
     ]}
   />
-  <PageTitle title={entry.data.title} />
+  <PageTitle title={page.data.title} />
   <p>
-    <img src={`/works/${entry.slug}.jpg`} />
+    <img src={`/works/${page.slug}.jpg`} />
   </p>
   <Content />
 </BaseLayout>
