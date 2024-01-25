@@ -1,0 +1,20 @@
+---
+export interface Props {
+  src: string;
+}
+
+const props = Astro.props;
+---
+
+<div class="container">
+  <img
+    src={props.src}
+    onerror="this.src='/assets/brand/card.jpg'; this.removeAttribute('onerror')"
+  />
+</div>
+
+<style lang="scss">
+  .container {
+    margin-bottom: 20px;
+  }
+</style>

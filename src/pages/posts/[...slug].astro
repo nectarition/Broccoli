@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PageTitle from "../../components/parts/PageTitle.astro";
 import Breadcrumbs from "../../components/parts/Breadcrumbs.astro";
+import Thumbnail from "../../components/parts/Thumbnail.astro";
 
 export const getStaticPaths = async () => {
   const posts = await getCollection("posts");
@@ -21,6 +22,7 @@ const { Content } = await page.render();
   thumbnailPath={`/posts/${page.slug}.png`}
   description={page.data.description}
 >
+  <Thumbnail src={`/posts/${page.slug}.png`} />
   <Breadcrumbs
     items={[
       {

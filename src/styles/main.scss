@@ -19,7 +19,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, ul, ol,
+p, blockquote, pre, ul, ol, hr,
 table {
   margin: 0;
   padding: 0;
@@ -124,6 +124,11 @@ table {
     padding: 5px;
     word-break: break-word;
   }
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--primary-brand-color);
 }
 
 .histories {
