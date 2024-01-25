@@ -7,7 +7,6 @@ export const GET = async (context: AstroGlobal) => {
   const postCollection = await getCollection('posts');
   const posts = postCollection
     .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  console.log(context.site)
 
   return rss({
     title: config.siteName,

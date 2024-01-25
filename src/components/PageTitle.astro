@@ -1,5 +1,6 @@
 ---
 import dayjs from "dayjs";
+import Share from "./Share.astro";
 
 export interface Props {
   title: string;
@@ -22,6 +23,7 @@ export interface Props {
       <div class="pageTitle_meta">{Astro.props.description}</div>
     )
   }
+  <Share />
 </div>
 
 <style lang="scss">
@@ -37,6 +39,7 @@ export interface Props {
       margin: 0;
     }
     &_meta {
+      margin-bottom: 5px;
     }
   }
 </style>

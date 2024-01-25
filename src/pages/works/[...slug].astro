@@ -1,9 +1,9 @@
 ---
 import { getCollection } from "astro:content";
-import Breadcrumbs from "../../components/parts/Breadcrumbs.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import PageTitle from "../../components/parts/PageTitle.astro";
-import Thumbnail from "../../components/parts/Thumbnail.astro";
+import PageTitle from "../../components/PageTitle.astro";
+import Thumbnail from "../../components/Thumbnail.astro";
 
 export const getStaticPaths = async () => {
   const works = await getCollection("works");
