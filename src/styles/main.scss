@@ -36,7 +36,18 @@ p {
 }
 
 ul, ol {
-  padding: 5px 40px;
+  margin-left: 40px;
+  
+  ul {
+    margin-left: 20px;
+  }
+
+  li {
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 ul p {
