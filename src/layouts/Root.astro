@@ -34,10 +34,6 @@ const imageURL = `${siteURL}${props.thumbnailPath ?? `/assets/brand/card.jpg`}`;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={imageURL} />
     <title>{pageTitle}</title>
-    <script>
-      import lenis from "../scripts/lenis";
-      lenis.initializeLenis();
-    </script>
   </head>
   <body>
     <slot />
