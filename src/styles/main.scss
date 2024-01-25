@@ -88,9 +88,9 @@ blockquote {
     font-size: 2em;
     content: '“';
     font-weight: bold;
-    color: var(--border-color);
+    color: #808080;
     top: -5px;
-    left: 10px;
+    left: 5px;
   }
 
   &::after {
@@ -98,9 +98,9 @@ blockquote {
     font-size: 2em;
     content: '”';
     font-weight: bold;
-    color: var(--border-color);
+    color: #808080;
     bottom: -5px;
-    right: 10px;
+    right: 5px;
   }
 }
 

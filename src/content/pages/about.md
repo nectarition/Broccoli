@@ -96,3 +96,9 @@ date: 2024-01-24T12:00:00+9
     <div class="histories_item_date">2023.01.11</div>
   </li>
 </ul>
+
+## 関連リンク
+
+- X (Twitter): [@nectarition](https://twitter.com/nectarition)
+- note: [nectarition](https://note.com/nectarition)
+- GitHub: [nectarition](https://github.com/nectarition)
