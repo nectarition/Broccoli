@@ -1,3 +1,7 @@
+const url = 'https://nectarition.jp'
+const siteName = 'ねくたりしょん'
+const description = 'いろいろやります、ねくたりしょん。'
+
 const menu = [
   {
     title: 'About',
@@ -30,5 +34,8 @@ const menu = [
 ]
 
 export default {
+  url,
+  siteName,
+  description,
   menu
 }
