@@ -1,0 +1,118 @@
+---
+type Post = {
+  id: string;
+  slug: string;
+  body: string;
+  collection: string;
+  data: {
+    title: string;
+    description: string;
+    date: Date;
+    draft?: boolean | undefined;
+  };
+};
+
+export interface Props {
+  type: string;
+  prevPost: Post | null;
+  nextPost: Post | null;
+}
+const { type, prevPost, nextPost } = Astro.props;
+---
+
+<div class="postNavigator">
+  {
+    prevPost && (
+      <div class="postNavigator_prev">
+        <div class="postNavigator_direction">PREVIOUS</div>
+        <div class="postNavigator_title">
+          <a href={`/${type}/${prevPost.slug}`}>{prevPost.data.title}</a>
+        </div>
+      </div>
+    )
+  }
+  {
+    nextPost && (
+      <div class="postNavigator_next">
+        <div class="postNavigator_direction">NEXT</div>
+        <div class="postNavigator_title">
+          <a href={`/${type}/${nextPost.slug}`}>{nextPost.data.title}</a>
+        </div>
+      </div>
+    )
+  }
+</div>
+
+<style lang="scss">
+  .postNavigator {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: #404040;
+
+    @media screen and (max-width: 840px) {
+      display: block;
+    }
+
+    &_prev,
+    &_next {
+      padding: 10px;
+      @media screen and (max-width: 840px) {
+        width: 100%;
+      }
+
+      a {
+        color: #404040;
+        text-decoration: none;
+      }
+    }
+    &_prev {
+      grid-column: 1;
+
+      padding-left: 61px;
+      text-align: left;
+      background-color: #f8f8f8;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        display: inline-block;
+        content: "";
+        width: 12px;
+        height: 12px;
+        top: 40%;
+        left: 26px;
+        border-bottom: #404040 3px solid;
+        border-left: #404040 3px solid;
+        transform: rotate(45deg);
+      }
+    }
+    &_next {
+      grid-column: 2;
+
+      padding-right: 61px;
+      text-align: right;
+      background-color: #f0f0f0;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        display: inline-block;
+        content: "";
+        width: 12px;
+        height: 12px;
+        top: 40%;
+        right: 26px;
+        border-top: #404040 3px solid;
+        border-right: #404040 3px solid;
+        transform: rotate(45deg);
+      }
+    }
+
+    &_direction {
+      font-size: 0.75em;
+    }
+    &_title {
+      font-weight: bold;
+    }
+  }
+</style>

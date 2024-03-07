@@ -4,16 +4,26 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import PageTitle from "../../components/PageTitle.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import Thumbnail from "../../components/Thumbnail.astro";
+import PostNavigator from "../../components/PostNavigator.astro";
 
 export const getStaticPaths = async () => {
   const posts = await getCollection("posts");
-  return posts.map((e) => ({
+  const sortedPosts = posts.sort(
+    (a, b) => b.data.date.getTime() - a.data.date.getTime()
+  );
+  const postCount = sortedPosts.length;
+
+  return sortedPosts.map((e, i) => ({
     params: { slug: e.slug },
-    props: { page: e },
+    props: {
+      page: e,
+      prevPage: (i + 1 !== postCount && sortedPosts[i + 1]) || null,
+      nextPage: (i !== 0 && sortedPosts[i - 1]) || null,
+    },
   }));
 };
 
-const { page } = Astro.props;
+const { page, prevPage, nextPage } = Astro.props;
 const { Content } = await page.render();
 ---
 
@@ -37,6 +47,11 @@ const { Content } = await page.render();
   />
   <PageTitle title={page.data.title} date={page.data.date} />
   <Content />
+  <PostNavigator
+    type={page.collection}
+    prevPost={prevPage}
+    nextPost={nextPage}
+  />
 </BaseLayout>
 
 <style lang="scss"></style>
