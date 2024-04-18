@@ -36,8 +36,10 @@ date: 2024-01-24T12:00:00+9
   </ul>
 </div>
 
-<a href="https://sokubaikairenrakukai.com/" target="_blank"><img src="/assets/banners/jdmn.png" style="height: 40px" alt="全国同人誌即売会連絡会"></a>
-<a href="https://vo.nrsy.jp" target="_blank"><img src="https://vo.nrsy.jp/banner.png" style="height: 40px" alt="音声合成系イベント開催情報まとめサイト"></a>
-<a href="https://kohatabe.jp" target="_blank"><img src="https://kohatabe.jp/banner.png" style="height: 40px" alt="小春六花はヨーグルトが食べたい"></a>
-<a href="https://shiokazehs.jp" target="_blank"><img src="https://shiokazehs.jp/banner.png" style="height: 40px" alt="しおばな祭"></a>
-<a href="https://futabastep.net" target="_blank"><img src="https://futabastep.net/banner.png" style="height: 40px" alt="ふたばすてっぷ"></a> 
+<div class="homeBannerRack">
+  <a href="https://sokubaikairenrakukai.com/" target="_blank"><img src="/assets/banners/jdmn.png" style="height: 40px" alt="全国同人誌即売会連絡会"></a>
+  <a href="https://vo.nrsy.jp" target="_blank"><img src="https://vo.nrsy.jp/banner.png" style="height: 40px" alt="音声合成系イベント開催情報まとめサイト"></a>
+  <a href="https://kohatabe.jp" target="_blank"><img src="https://kohatabe.jp/banner.png" style="height: 40px" alt="小春六花はヨーグルトが食べたい"></a>
+  <a href="https://shiokazehs.jp" target="_blank"><img src="https://shiokazehs.jp/banner.png" style="height: 40px" alt="しおばな祭"></a>
+  <a href="https://futabastep.net" target="_blank"><img src="https://futabastep.net/banner.png" style="height: 40px" alt="ふたばすてっぷ"></a> 
+</div>

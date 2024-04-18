@@ -222,7 +222,7 @@ hr {
 
 .homeStyle {
   margin-bottom: 40px;
-  
+
   .sectionHeader {
     margin-bottom: 40px;
     font-weight: bold;
@@ -243,6 +243,13 @@ hr {
       color: var(--primary-brand-color);
     }
   }
+}
+
+.homeBannerRack {
+  display: flex;
+  flex-flow: warp;
+  gap: 5px;
+  font-size: 0;
 }
 
 .workCard {
