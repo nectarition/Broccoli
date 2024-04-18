@@ -247,7 +247,7 @@ hr {
 
 .homeBannerRack {
   display: flex;
-  flex-flow: warp;
+  flex-flow: wrap; 
   gap: 5px;
   font-size: 0;
 }
