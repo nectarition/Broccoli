@@ -10,43 +10,41 @@ const sortedPages = pages
 ---
 
 <BaseLayout>
-  <div class="homeHero">
-    <div class="homeHero_brand">
-      <div class="homeHero_brand_subTitle">いろいろやります、</div>
-      <div class="homeHero_brand_title">ねくたりしょん。</div>
-      <div class="homeHero_brand_description">
+  <div class="hero">
+    <div class="hero_brand">
+      <div class="hero_brand_subTitle">いろいろやります、</div>
+      <div class="hero_brand_title">ねくたりしょん。</div>
+      <div class="hero_brand_description">
         染宮ねいろの活動知見を共有して、いい感じに成長していくサークル。
       </div>
     </div>
   </div>
   <div class="container">
     <div class="main">
-      <div class="homeStyle">
-        <div class="sectionHeader">
-          <div class="sectionHeader_title">Nectarition</div>
-          <div class="sectionHeader_subTitle">ねくたりしょんとは</div>
-        </div>
-        <p>
-          2020年12月14日に、染宮ねいろ個人の活動をさらに発展すべく設立したサークル。<br
-          />
-          「マインド: <b>いろいろやります。</b>」を掲げ日々活動中。
-        </p>
-
-        <div class="sectionHeader">
-          <div class="sectionHeader_title">Details</div>
-          <div class="sectionHeader_subTitle">なにをやるか</div>
-        </div>
-        <p>主に以下の分野において活動を行っています。</p>
-        <ul>
-          <li>
-            <b>イベント主催・運営</b> 同人誌即売会イベント企画・運営, 運営アドバイス
-          </li>
-          <li><b>システム開発・運用</b> Webアプリケーション開発</li>
-          <li>
-            <b>デザイン制作・研究</b> ロゴ, 紙面, 名刺, Webデザイン, ブランディングコーディネート
-          </li>
-        </ul>
+      <div class="sectionHeader">
+        <div class="sectionHeader_title">Nectarition</div>
+        <div class="sectionHeader_subTitle">ねくたりしょんとは</div>
       </div>
+      <p>
+        2020年12月14日に、染宮ねいろ個人の活動をさらに発展すべく設立したサークル。<br
+        />
+        「マインド: <b>いろいろやります。</b>」を掲げ日々活動中。
+      </p>
+
+      <div class="sectionHeader">
+        <div class="sectionHeader_title">Details</div>
+        <div class="sectionHeader_subTitle">なにをやるか</div>
+      </div>
+      <p>主に以下の分野において活動を行っています。</p>
+      <ul>
+        <li>
+          <b>イベント主催・運営</b> 同人誌即売会イベント企画・運営, 運営アドバイス
+        </li>
+        <li><b>システム開発・運用</b> Webアプリケーション開発</li>
+        <li>
+          <b>デザイン制作・研究</b> ロゴ, 紙面, 名刺, Webデザイン, ブランディングコーディネート
+        </li>
+      </ul>
     </div>
     <div class="side">
       <div class="menuTitle">最近の雑記</div>
@@ -65,10 +63,57 @@ const sortedPages = pages
       <div class="more"><a href="/posts">もっと見る</a></div>
     </div>
   </div>
+
+  <div class="homeBannerRack">
+    <a href="https://sokubaikairenrakukai.com/" target="_blank"
+      ><img
+        src="/assets/banners/jdmn.png"
+        style="height: 40px"
+        alt="全国同人誌即売会連絡会"
+      /></a
+    >
+    <a href="https://vo.nrsy.jp" target="_blank"
+      ><img
+        src="https://vo.nrsy.jp/banner.png"
+        style="height: 40px"
+        alt="音声合成系イベント開催情報まとめサイト"
+      /></a
+    >
+    <a href="https://kohatabe.jp" target="_blank"
+      ><img
+        src="https://kohatabe.jp/banner.png"
+        style="height: 40px"
+        alt="小春六花はヨーグルトが食べたい"
+      /></a
+    >
+    <a href="https://shiokazehs.jp" target="_blank"
+      ><img
+        src="https://shiokazehs.jp/banner.png"
+        style="height: 40px"
+        alt="しおばな祭"
+      /></a
+    >
+    <a href="https://futabastep.net" target="_blank"
+      ><img
+        src="https://futabastep.net/banner.png"
+        style="height: 40px"
+        alt="ふたばすてっぷ"
+      /></a
+    >
+    <a href="https://sites.google.com/view/happy-busy/" target="_blank"
+      ><img
+        src="/assets/banners/happy-busy.png"
+        style="height: 40px"
+        alt="時間のないサイト運営者リング"
+      /></a
+    >
+  </div>
 </BaseLayout>
 
 <style lang="scss">
   .container {
+    margin-bottom: 20px;
+
     display: grid;
     grid-template-columns: 70% 1fr;
 
@@ -82,6 +127,53 @@ const sortedPages = pages
   }
   .side {
   }
+  .sectionHeader {
+    margin-bottom: 40px;
+    font-weight: bold;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &_title {
+      font-size: 3em;
+      @media screen and (max-width: 840px) {
+        font-size: 2em;
+      }
+    }
+
+    &_subTitle {
+      margin-top: -0.5em;
+      color: var(--primary-brand-color);
+    }
+  }
+  .hero {
+    color: #ffffff;
+    background-color: var(--primary-brand-color);
+    font-weight: bold;
+
+    &_brand {
+      margin-bottom: 40px;
+
+      padding: 100px 10%;
+      @media screen and (max-width: 840px) {
+        padding: 20px;
+        font-size: 0.75rem;
+      }
+
+      text-align: center;
+      &_subTitle {
+        font-size: 1.5em;
+      }
+      &_title {
+        font-size: 3em;
+      }
+      &_description {
+        margin-top: 5px;
+      }
+    }
+  }
+
   .menuTitle {
     margin-bottom: 20px;
     font-size: 1.25em;
@@ -97,5 +189,11 @@ const sortedPages = pages
   }
   .more {
     text-align: right;
+  }
+  .homeBannerRack {
+    display: flex;
+    flex-flow: wrap;
+    gap: 5px;
+    font-size: 0;
   }
 </style>
