@@ -25,7 +25,12 @@ const sortedPages = pages.sort(
   <div class="cardRack">
     {
       sortedPages.map((p) => (
-        <PostCard slug={p.slug} title={p.data.title} date={p.data.date} />
+        <PostCard
+          slug={p.slug}
+          title={p.data.title}
+          date={p.data.date}
+          scaleTransition={true}
+        />
       ))
     }
   </div>

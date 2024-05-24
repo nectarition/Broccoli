@@ -1,11 +1,101 @@
 ---
-import { getEntry } from "astro:content";
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PostCard from "../components/PostCard.astro";
 
-const page = await getEntry("pages", "index");
-const { Content } = await page.render();
+const pages = await getCollection("posts");
+const sortedPages = pages
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 5);
 ---
 
 <BaseLayout>
-  <Content />
+  <div class="homeHero">
+    <div class="homeHero_brand">
+      <div class="homeHero_brand_subTitle">いろいろやります、</div>
+      <div class="homeHero_brand_title">ねくたりしょん。</div>
+      <div class="homeHero_brand_description">
+        染宮ねいろの活動知見を共有して、いい感じに成長していくサークル。
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="main">
+      <div class="homeStyle">
+        <div class="sectionHeader">
+          <div class="sectionHeader_title">Nectarition</div>
+          <div class="sectionHeader_subTitle">ねくたりしょんとは</div>
+        </div>
+        <p>
+          2020年12月14日に、染宮ねいろ個人の活動をさらに発展すべく設立したサークル。<br
+          />
+          「マインド: <b>いろいろやります。</b>」を掲げ日々活動中。
+        </p>
+
+        <div class="sectionHeader">
+          <div class="sectionHeader_title">Details</div>
+          <div class="sectionHeader_subTitle">なにをやるか</div>
+        </div>
+        <p>主に以下の分野において活動を行っています。</p>
+        <ul>
+          <li>
+            <b>イベント主催・運営</b> 同人誌即売会イベント企画・運営, 運営アドバイス
+          </li>
+          <li><b>システム開発・運用</b> Webアプリケーション開発</li>
+          <li>
+            <b>デザイン制作・研究</b> ロゴ, 紙面, 名刺, Webデザイン, ブランディングコーディネート
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="side">
+      <div class="menuTitle">最近の雑記</div>
+      <div class="cardRack">
+        {
+          sortedPages.map((p) => (
+            <PostCard
+              title={p.data.title}
+              slug={p.slug}
+              date={p.data.date}
+              scaleTransition={false}
+            />
+          ))
+        }
+      </div>
+      <div class="more"><a href="/posts">もっと見る</a></div>
+    </div>
+  </div>
 </BaseLayout>
+
+<style lang="scss">
+  .container {
+    display: grid;
+    grid-template-columns: 70% 1fr;
+
+    gap: 20px;
+
+    @media screen and (max-width: 840px) {
+      grid-template-columns: auto;
+    }
+  }
+  .main {
+  }
+  .side {
+  }
+  .menuTitle {
+    margin-bottom: 20px;
+    font-size: 1.25em;
+    font-weight: bold;
+    color: var(--primary-brand-color);
+  }
+  .cardRack {
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+  }
+  .more {
+    text-align: right;
+  }
+</style>

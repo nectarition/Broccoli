@@ -5,13 +5,14 @@ export interface Props {
   slug: string;
   title: string;
   date: Date;
+  scaleTransition: boolean;
 }
 
 const props = Astro.props;
 ---
 
 <a href={`/posts/${props.slug}`} class="card">
-  <div class="card_title">
+  <div class={`card_title ${props.scaleTransition && "scaleTransition"}`}>
     {props.title}
   </div>
   <div class="card_meta">
@@ -28,9 +29,7 @@ const props = Astro.props;
 
     &_title {
       font-weight: bold;
-      transition:
-        color 0.2s,
-        font-size 0.5s ease;
+      transition: color 0.2s, font-size 0.5s ease;
     }
 
     position: relative;
@@ -65,10 +64,17 @@ const props = Astro.props;
     &:hover {
       & .card_title {
         color: var(--primary-brand-color);
-        font-size: 1.1em;
       }
       &::after {
         width: 100%;
+      }
+    }
+  }
+
+  .scaleTransition {
+    &:hover {
+      & .card_title {
+        font-size: 1.1em;
       }
     }
   }
