@@ -2,6 +2,7 @@
 date: 2022-12-12T12:00:00+9
 title: '文化祭を作る'
 description: '先日開催した「しおばな祭」の裏話を少しだけ記します。'
+showList: true
 ---
 
 おはようございます、染宮ねいろです。この記事は「[SynthVとかTOKYO6とか Advent Calendar 2022](https://adventar.org/calendars/8111)」12日目の記事です。

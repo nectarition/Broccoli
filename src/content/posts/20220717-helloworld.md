@@ -2,6 +2,7 @@
 date: 2022-07-17T12:00:00+9
 title: 'Nectarition Blog はじめました'
 description: 'ブログをはじめました。'
+showList: true
 ---
 
 こんにちは、染宮ねいろです。

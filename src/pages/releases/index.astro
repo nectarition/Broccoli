@@ -5,13 +5,13 @@ import Breadcrumbs from "../../components/Breadcrumbs.astro";
 import PageTitle from "../../components/PageTitle.astro";
 import PostCard from "../../components/PostCard.astro";
 
-const pages = await getCollection("posts");
+const pages = await getCollection("releases");
 const sortedPages = pages
   .filter((p) => p.data.showList)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
-<BaseLayout title="Posts">
+<BaseLayout title="Press Releases">
   <Breadcrumbs
     items={[
       {
@@ -20,13 +20,13 @@ const sortedPages = pages
       },
     ]}
   />
-  <PageTitle title="Posts" description="染宮ねいろの雑記" />
+  <PageTitle title="Releases" description="ねくたりしょんからのお知らせ" />
 
   <div class="cardRack">
     {
       sortedPages.map((p) => (
         <PostCard
-          path={`/posts/${p.slug}`}
+          path={`/releases/${p.slug}`}
           title={p.data.title}
           date={p.data.date}
           scaleTransition={true}

@@ -12,6 +12,10 @@ const menu = [
     path: '/leader'
   },
   {
+    title: 'Releases',
+    path: '/releases'
+  },
+  {
     title: 'Works',
     path: '/works'
   },

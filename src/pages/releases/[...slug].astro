@@ -1,0 +1,57 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageTitle from "../../components/PageTitle.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import Thumbnail from "../../components/Thumbnail.astro";
+import PostNavigator from "../../components/PostNavigator.astro";
+
+export const getStaticPaths = async () => {
+  const releases = await getCollection("releases");
+  const sortedReleases = releases.sort(
+    (a, b) => b.data.date.getTime() - a.data.date.getTime()
+  );
+  const postCount = sortedReleases.length;
+
+  return sortedReleases.map((e, i) => ({
+    params: { slug: e.slug },
+    props: {
+      page: e,
+      prevPage: (i + 1 !== postCount && sortedReleases[i + 1]) || null,
+      nextPage: (i !== 0 && sortedReleases[i - 1]) || null,
+    },
+  }));
+};
+
+const { page, prevPage, nextPage } = Astro.props;
+const { Content } = await page.render();
+---
+
+<BaseLayout
+  title={page.data.title}
+  thumbnailPath={`/releases/${page.slug}.png`}
+  description={page.data.description}
+>
+  <Thumbnail src={`/releases/${page.slug}.png`} />
+  <Breadcrumbs
+    items={[
+      {
+        title: "Home",
+        path: "/",
+      },
+      {
+        title: "Releases",
+        path: "/releases",
+      },
+    ]}
+  />
+  <PageTitle title={page.data.title} date={page.data.date} />
+  <Content />
+  <PostNavigator
+    type={page.collection}
+    prevPost={prevPage}
+    nextPost={nextPage}
+  />
+</BaseLayout>
+
+<style lang="scss"></style>

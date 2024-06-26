@@ -2,6 +2,7 @@
 title: 'AzureCraft: Azure VMでマイクラサーバを立てて遊ぶ'
 description: 'Azure Virtual MachinesでMinecraftサーバを建てて遊ぼう'
 date: 2023-01-05T12:00:00+9
+showList: true
 ---
 
 こんにちは、染宮ねいろです。

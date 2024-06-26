@@ -2,9 +2,17 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PostCard from "../components/PostCard.astro";
+import dayjs from "dayjs";
 
-const pages = await getCollection("posts");
-const sortedPages = pages
+const posts = await getCollection("posts");
+const releases = await getCollection("releases");
+
+const sortedPosts = posts
+  .filter((p) => p.data.showList)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 5);
+const sortedReleases = releases
+  .filter((p) => p.data.showList)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
   .slice(0, 5);
 ---
@@ -21,39 +29,64 @@ const sortedPages = pages
   </div>
   <div class="container">
     <div class="main">
-      <div class="sectionHeader">
-        <div class="sectionHeader_title">Nectarition</div>
-        <div class="sectionHeader_subTitle">ねくたりしょんとは</div>
-      </div>
-      <p>
-        2020年12月14日に、染宮ねいろ個人の活動をさらに発展すべく設立したサークル。<br
-        />
-        「マインド: <b>いろいろやります。</b>」を掲げ日々活動中。
-      </p>
+      <div class="section">
+        <div class="sectionHeader">
+          <div class="sectionHeader_title">Nectarition</div>
+          <div class="sectionHeader_subTitle">ねくたりしょんとは</div>
+        </div>
 
-      <div class="sectionHeader">
-        <div class="sectionHeader_title">Details</div>
-        <div class="sectionHeader_subTitle">なにをやるか</div>
+        <p>
+          2020年12月14日に、染宮ねいろ個人の活動をさらに発展すべく設立したサークル。<br
+          />
+          「マインド: <b>いろいろやります。</b>」を掲げ日々活動中。
+        </p>
       </div>
-      <p>主に以下の分野において活動を行っています。</p>
-      <ul>
-        <li>
-          <b>イベント主催・運営</b> 同人誌即売会イベント企画・運営, 運営アドバイス
-        </li>
-        <li><b>システム開発・運用</b> Webアプリケーション開発</li>
-        <li>
-          <b>デザイン制作・研究</b> ロゴ, 紙面, 名刺, Webデザイン, ブランディングコーディネート
-        </li>
-      </ul>
+
+      <div class="section">
+        <div class="sectionHeader">
+          <div class="sectionHeader_title">Details</div>
+          <div class="sectionHeader_subTitle">なにをやるか</div>
+        </div>
+
+        <p>主に以下の分野において活動を行っています。</p>
+        <ul>
+          <li>
+            <b>イベント主催・運営</b> 同人誌即売会イベント企画・運営, 運営アドバイス
+          </li>
+          <li><b>システム開発・運用</b> Webアプリケーション開発</li>
+          <li>
+            <b>デザイン制作・研究</b> ロゴ, 紙面, 名刺, Webデザイン, ブランディングコーディネート
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <div class="sectionHeader">
+          <div class="sectionHeader_title">Releases</div>
+          <div class="sectionHeader_subTitle">最近の動向</div>
+        </div>
+        <ul>
+          {
+            sortedReleases.map((r) => (
+              <li>
+                {dayjs(r.data.date).format("YYYY年 M月 D日")}{" "}
+                <a href={`/releases/${r.slug}`}>{r.data.title}</a>
+              </li>
+            ))
+          }
+        </ul>
+        <div class="more"><a href="/releases">もっと見る</a></div>
+      </div>
     </div>
+
     <div class="side">
       <div class="menuTitle">最近の雑記</div>
       <div class="cardRack">
         {
-          sortedPages.map((p) => (
+          sortedPosts.map((p) => (
             <PostCard
               title={p.data.title}
-              slug={p.slug}
+              path={`/posts/${p.slug}`}
               date={p.data.date}
               scaleTransition={false}
             />
@@ -112,7 +145,7 @@ const sortedPages = pages
 
 <style lang="scss">
   .container {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 
     display: grid;
     grid-template-columns: 70% 1fr;
@@ -120,6 +153,7 @@ const sortedPages = pages
     gap: 20px;
 
     @media screen and (max-width: 840px) {
+      margin-bottom: 20px;
       grid-template-columns: auto;
     }
   }
@@ -127,12 +161,24 @@ const sortedPages = pages
   }
   .side {
   }
+  .section {
+    margin-bottom: 40px;
+    @media screen and (max-width: 840px) {
+      margin-bottom: 20px;
+    }
+  }
   .sectionHeader {
     margin-bottom: 40px;
     font-weight: bold;
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 840px) {
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border-color);
     }
 
     &_title {

@@ -2,7 +2,7 @@
 import dayjs from "dayjs";
 
 export interface Props {
-  slug: string;
+  path: string;
   title: string;
   date: Date;
   scaleTransition: boolean;
@@ -11,7 +11,7 @@ export interface Props {
 const props = Astro.props;
 ---
 
-<a href={`/posts/${props.slug}`} class="card">
+<a href={props.path} class="card">
   <div class={`card_title ${props.scaleTransition && "scaleTransition"}`}>
     {props.title}
   </div>

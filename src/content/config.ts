@@ -4,13 +4,19 @@ const baseProps = {
   draft: z.boolean().optional(),
   title: z.string(),
   description: z.string(),
-  date: z.date()
+  date: z.date(),
+  showList: z.boolean().optional()
 }
 
 const postCollection = defineCollection({
   type: 'content',
   schema: z.object(baseProps)
 });
+
+const pressReleaseCollection = defineCollection({
+  type: 'content',
+  schema: z.object(baseProps)
+})
 
 const pageCollection = defineCollection({
   type: 'content',
@@ -25,5 +31,6 @@ const workCollection = defineCollection({
 export const collections = {
   'pages': pageCollection,
   'posts': postCollection,
-  'works': workCollection
+  'works': workCollection,
+  'releases': pressReleaseCollection
 };

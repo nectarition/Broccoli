@@ -2,6 +2,7 @@
 date: 2022-07-20T12:00:00+9
 title: 'Hugo + Forestry + Netlify環境下における日付情報のタイムゾーン適用'
 description: 'Hugo + Forestry環境下で日付にタイムゾーンが適用されない問題を解決します。'
+showList: true
 ---
 
 Hugo + Forestry環境下で日付にタイムゾーンが適用されない問題を解決します。
