@@ -36,10 +36,6 @@ date: 2024-01-24T12:00:00+9
     <div class="histories_item_date">2021.11.14</div>
   </li>
   <li>
-    <div class="histories_item_content">ねくたりしょん 設立1周年</div>
-    <div class="histories_item_date">2021.12.14</div>
-  </li>
-  <li>
     <div class="histories_item_content">ねくたりしょん初の単独開催イベント「しおばな祭」開催</div>
     <div class="histories_item_date">2022.05.07</div>
   </li>
@@ -58,10 +54,6 @@ date: 2024-01-24T12:00:00+9
   <li>
     <div class="histories_item_content">「マインド: いろいろやります。」制定</div>
     <div class="histories_item_date">2022.08.18</div>
-  </li>
-  <li>
-    <div class="histories_item_content">ねくたりしょん 設立2周年</div>
-    <div class="histories_item_date">2022.12.14</div>
   </li>
   <li>
     <div class="histories_item_content">Nectarition Webサイト 公開</div>
@@ -86,10 +78,6 @@ date: 2024-01-24T12:00:00+9
     <div class="histories_item_content">芽宮ねい キャラクターデザイン 公開</div>
     <div class="histories_item_remarks">デザイナー: <a href="https://372kelvin.com/">みなつき</a>様</div>
     <div class="histories_item_date">2023.11.28</div>
-  </li>
-  <li>
-    <div class="histories_item_content">ねくたりしょん 設立3周年</div>
-    <div class="histories_item_date">2023.12.14</div>
   </li>
   <li>
     <div class="histories_item_content">ねくたりしょん 現行Webサイト 公開</div>
