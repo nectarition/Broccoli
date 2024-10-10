@@ -79,10 +79,12 @@ date: 2024-01-24T12:00:00+9
   </li>
   <li>
     <div class="histories_item_content">第二回小樽潮風高校文化祭「しおばな祭」 開催</div>
+    <div class="histories_item_remarks">DJクラブイベント, 即売会イベント</div>
     <div class="histories_item_date">2023.11.03, 04</div>
   </li>
   <li>
     <div class="histories_item_content">芽宮ねい キャラクターデザイン 公開</div>
+    <div class="histories_item_remarks">デザイナー: <a href="https://372kelvin.com/">みなつき</a>様</div>
     <div class="histories_item_date">2023.11.28</div>
   </li>
   <li>
@@ -92,12 +94,26 @@ date: 2024-01-24T12:00:00+9
   <li>
     <div class="histories_item_content">ねくたりしょん 現行Webサイト 公開</div>
     <div class="histories_item_remarks">コードネーム Broccoli v2</div>
-    <div class="histories_item_date">2023.01.11</div>
+    <div class="histories_item_date">2024.01.11</div>
+  </li>
+  <li>
+    <div class="histories_item_content">ふたばすてっぷ 開催</div>
+    <div class="histories_item_remarks">足立の一歩と併催</div>
+    <div class="histories_item_date">2024.06.02</div>
+  </li>
+  <li>
+    <div class="histories_item_content">そうぞうパレッツ 開催</div>
+    <div class="histories_item_remarks">小春六花はヨーグルトが食べたい３ 開催</div>
+    <div class="histories_item_date">2024.07.21</div>
+  </li>
+  <li>
+    <div class="histories_item_content">第三回小樽潮風高校文化祭「しおばな祭」 開催</div>
+    <div class="histories_item_date">2024.11.02</div>
   </li>
 </ul>
 
 ## 関連リンク
 
-- X (Twitter): [@nectarition](https://twitter.com/nectarition)
+- X (Twitter): [@nectarition](https://x.com/nectarition)
 - note: [nectarition](https://note.com/nectarition)
 - GitHub: [nectarition](https://github.com/nectarition)
