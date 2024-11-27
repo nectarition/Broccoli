@@ -2,6 +2,7 @@
 title: 'Virtual Voice Harmony'
 description: 'ロゴ, フライヤーデザイン'
 date: 2022-12-06T12:00:00+9
+showList: true
 ---
 
 ロゴとフライヤーをデザインしました。

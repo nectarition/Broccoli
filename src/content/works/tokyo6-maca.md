@@ -2,6 +2,7 @@
 title: 'TOKYO6限界コンピ'
 description: 'アートワークデザイン'
 date: 2022-09-11T12:00:00+9
+showList: true
 ---
 
 新幹線の中で作りました。

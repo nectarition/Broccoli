@@ -2,6 +2,7 @@
 title: 'Synthesizer V Unofficial Festival 2023'
 description: '楽曲投稿祭の開催'
 date: 2023-02-04T00:00:00+9
+showList: true
 ---
 
 Synthesizer V の非公式投稿祭を開催しました。

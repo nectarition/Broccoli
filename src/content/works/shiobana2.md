@@ -2,6 +2,7 @@
 title: '第二回小樽潮風高校文化祭「しおばな祭」'
 description: 'TOKYO6キャラクターオンリーイベント'
 date: 2023-11-04T12:00:00+9
+showList: true
 ---
 
 前夜祭 (Shiokaze Groove しおぐる) を 2023年11月 3日に秋葉原・雷神にて、  
