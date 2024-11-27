@@ -15,10 +15,10 @@ const menu = [
     title: 'Releases',
     path: '/releases'
   },
-  {
-    title: 'Works',
-    path: '/works'
-  },
+  // {
+  //   title: 'Works',
+  //   path: '/works'
+  // },
   {
     title: 'Posts',
     path: '/posts'
