@@ -1,8 +1,6 @@
 ---
 type Post = {
   id: string;
-  slug: string;
-  body: string;
   collection: string;
   data: {
     title: string;
@@ -26,7 +24,7 @@ const { type, prevPost, nextPost } = Astro.props;
       <div class="postNavigator_prev">
         <div class="postNavigator_direction">PREVIOUS</div>
         <div class="postNavigator_title">
-          <a href={`/${type}/${prevPost.slug}`}>{prevPost.data.title}</a>
+          <a href={`/${type}/${prevPost.id}`}>{prevPost.data.title}</a>
         </div>
       </div>
     )
@@ -36,7 +34,7 @@ const { type, prevPost, nextPost } = Astro.props;
       <div class="postNavigator_next">
         <div class="postNavigator_direction">NEXT</div>
         <div class="postNavigator_title">
-          <a href={`/${type}/${nextPost.slug}`}>{nextPost.data.title}</a>
+          <a href={`/${type}/${nextPost.id}`}>{nextPost.data.title}</a>
         </div>
       </div>
     )

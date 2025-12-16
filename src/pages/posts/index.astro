@@ -26,7 +26,7 @@ const sortedPages = pages
     {
       sortedPages.map((p) => (
         <PostCard
-          path={`/posts/${p.slug}`}
+          path={`/posts/${p.id}`}
           title={p.data.title}
           date={p.data.date}
           scaleTransition={true}

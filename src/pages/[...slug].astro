@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import PageTitle from "../components/PageTitle.astro";
@@ -7,13 +7,13 @@ import PageTitle from "../components/PageTitle.astro";
 export const getStaticPaths = async () => {
   const posts = await getCollection("pages");
   return posts.map((e) => ({
-    params: { slug: e.slug },
+    params: { slug: e.id },
     props: { page: e },
   }));
 };
 
 const { page } = Astro.props;
-const { Content } = await page.render();
+const { Content } = await render(page);
 ---
 
 <BaseLayout title={page.data.title} description={page.data.description}>

@@ -70,7 +70,7 @@ const sortedReleases = releases
             sortedReleases.map((r) => (
               <li>
                 {dayjs(r.data.date).format("YYYY年 M月 D日")}{" "}
-                <a href={`/releases/${r.slug}`}>{r.data.title}</a>
+                <a href={`/releases/${r.id}`}>{r.data.title}</a>
               </li>
             ))
           }
@@ -86,7 +86,7 @@ const sortedReleases = releases
           sortedPosts.map((p) => (
             <PostCard
               title={p.data.title}
-              path={`/posts/${p.slug}`}
+              path={`/posts/${p.id}`}
               date={p.data.date}
               scaleTransition={false}
             />

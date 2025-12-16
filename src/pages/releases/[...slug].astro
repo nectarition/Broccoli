@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PageTitle from "../../components/PageTitle.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
@@ -14,7 +14,7 @@ export const getStaticPaths = async () => {
   const postCount = sortedReleases.length;
 
   return sortedReleases.map((e, i) => ({
-    params: { slug: e.slug },
+    params: { slug: e.id },
     props: {
       page: e,
       prevPage: (i + 1 !== postCount && sortedReleases[i + 1]) || null,
@@ -24,15 +24,15 @@ export const getStaticPaths = async () => {
 };
 
 const { page, prevPage, nextPage } = Astro.props;
-const { Content } = await page.render();
+const { Content } = await render(page);
 ---
 
 <BaseLayout
   title={page.data.title}
-  thumbnailPath={`/releases/${page.slug}.png`}
+  thumbnailPath={`/releases/${page.id}.png`}
   description={page.data.description}
 >
-  <Thumbnail src={`/releases/${page.slug}.png`} />
+  <Thumbnail src={`/releases/${page.id}.png`} />
   <Breadcrumbs
     items={[
       {
