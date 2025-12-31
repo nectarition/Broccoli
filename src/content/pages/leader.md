@@ -17,10 +17,8 @@ date: 2025-12-31T12:00:00+9
 ## リンク
 
 - GitHub: [10mocy](https://github.com/10mocy)
-- Wantedly: [with10mocy](https://wantedly.com/id/with10mocy)
 - Twitter: [nirsmmy](https://twitter.com/nirsmmy)
 - Keybase: [10mocy](https://keybase.io/10mocy)
-- ニコニコ動画: [users/116330134](https://www.nicovideo.jp/users/116330134)
 
 ## PGP Public Key
 
