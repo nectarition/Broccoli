@@ -80,28 +80,86 @@ date: 2024-01-24T12:00:00+9
     <div class="histories_item_date">2023.11.28</div>
   </li>
   <li>
+    <div class="histories_item_content">某集会でのハイブリッド会議 設計・運用</div>
+    <div class="histories_item_remarks">現地・オンライン参加者の双方向対話に対応</div>
+    <div class="histories_item_date">2023.12.某日</div>
+  </li>
+  <li>
     <div class="histories_item_content">ねくたりしょん 現行Webサイト 公開</div>
     <div class="histories_item_remarks">コードネーム Broccoli v2</div>
     <div class="histories_item_date">2024.01.11</div>
   </li>
   <li>
     <div class="histories_item_content">ふたばすてっぷ 開催</div>
-    <div class="histories_item_remarks">足立の一歩と併催</div>
+    <div class="histories_item_remarks">「足立の一歩」と併催</div>
     <div class="histories_item_date">2024.06.02</div>
   </li>
   <li>
     <div class="histories_item_content">そうぞうパレッツ 開催</div>
-    <div class="histories_item_remarks">小春六花はヨーグルトが食べたい３ 開催</div>
+    <div class="histories_item_remarks">ねくたりしょん初の名古屋開催, 小春六花はヨーグルトが食べたい３ 開催</div>
     <div class="histories_item_date">2024.07.21</div>
+  </li>
+  <li>
+    <div class="histories_item_content">某集会でのハイブリッド会議 設計・運用</div>
+    <div class="histories_item_date">2024.07.某日</div>
   </li>
   <li>
     <div class="histories_item_content">第三回小樽潮風高校文化祭「しおばな祭」 開催</div>
     <div class="histories_item_date">2024.11.02</div>
+  </li>
+  <li>
+    <div class="histories_item_content">某集会でのハイブリッド会議 設計・運用</div>
+    <div class="histories_item_date">2024.12.某日</div>
+  </li>
+  <li>
+    <div class="histories_item_content">うちのこどーぞ 開催</div>
+    <div class="histories_item_date">2025.04.06</div>
+  </li>
+  <li>
+    <div class="histories_item_content">そうぞうパレッツ東京 2025 開催</div>
+    <div class="histories_item_remarks">小春六花はヨーグルトが食べたい４, ふたばすてっぷ２開催</div>
+    <div class="histories_item_date">2025.05.04</div>
+  </li>
+  <li>
+    <div class="histories_item_content">ふたばすてっぷ２ 開催</div>
+    <div class="histories_item_remarks">「つのせのせかい」と併催</div>
+    <div class="histories_item_date">2025.06.02</div>
+  </li>
+  <li>
+    <div class="histories_item_content">そうぞうパレッツ名古屋 2025 開催</div>
+    <div class="histories_item_remarks">うちのこどーぞ、ふたりめ！ 開催</div>
+    <div class="histories_item_date">2025.07.12 - 13</div>
+  </li>
+  <li>
+    <div class="histories_item_content">某集会でのハイブリッド会議 設計・運用</div>
+    <div class="histories_item_date">2025.07.某日</div>
+  </li>
+  <li>
+    <div class="histories_item_content">第四回小樽潮風高校文化祭「しおばな祭」 開催</div>
+    <div class="histories_item_remarks">ねくたりしょん初の北海道開催</div>
+    <div class="histories_item_date">2025.09.06</div>
+  </li>
+  <li>
+    <div class="histories_item_content">本拠地を愛知県名古屋市に移転</div>
+    <div class="histories_item_date">2025.10.31</div>
+  </li>
+  <li>
+    <div class="histories_item_content">某集会でのハイブリッド会議 設計・運用</div>
+    <div class="histories_item_date">2025.12.某日</div>
+  </li>
+  <li>
+    <div class="histories_item_content">そうぞうパレッツ東京 2026 開催</div>
+    <div class="histories_item_remarks">小春六花はヨーグルトが食べたい５, ふたばすてっぷ３, うちのこどーぞ、さんにんめ！ 開催</div>
+    <div class="histories_item_date">2026.03.29</div>
+  </li>
+  <li>
+    <div class="histories_item_content">そうぞうパレッツ名古屋 2026 開催</div>
+    <div class="histories_item_remarks">うちのこどーぞ、よにんめ！ 開催</div>
+    <div class="histories_item_date">2026.05.10</div>
   </li>
 </ul>
 
 ## 関連リンク
 
 - X (Twitter): [@nectarition](https://x.com/nectarition)
-- note: [nectarition](https://note.com/nectarition)
 - GitHub: [nectarition](https://github.com/nectarition)
