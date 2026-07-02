@@ -1,5 +1,4 @@
 ---
-slug: cloudflare-d1-prisma-null-foreign-key
 date: 2026-07-02T12:00:00+09:00
 title: 'Cloudflare D1 + Prisma で Null 許容の外部キー参照を使用すると、マイグレーション時に参照が失われる場合がある'
 description: 'Cloudflare D1 と Prisma を組み合わせて使用する場合、Null 許容の外部キー参照を定義した状態でマイグレーションを実行すると、意図せず参照カラムの値が NULL に変更されることがあります。'
