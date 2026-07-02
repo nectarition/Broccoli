@@ -112,7 +112,7 @@ date: 2024-01-24T12:00:00+9
     <div class="histories_item_date">2024.12.某日</div>
   </li>
   <li>
-    <div class="histories_item_content">うちのこどーぞ 開催</div>
+    <div class="histories_item_content">うちのこどーぞ！ 開催</div>
     <div class="histories_item_date">2025.04.06</div>
   </li>
   <li>
