@@ -80,7 +80,7 @@ date: 2024-01-24T12:00:00+9
     <div class="histories_item_date">2023.11.28</div>
   </li>
   <li>
-    <div class="histories_item_content">某集会でのハイブリッド会議 設計・運用</div>
+    <div class="histories_item_content">某集会でのハイブリッド会議配信 設計・運用</div>
     <div class="histories_item_remarks">現地・オンライン参加者の双方向対話に対応</div>
     <div class="histories_item_date">2023.12.某日</div>
   </li>
@@ -100,7 +100,7 @@ date: 2024-01-24T12:00:00+9
     <div class="histories_item_date">2024.07.21</div>
   </li>
   <li>
-    <div class="histories_item_content">某集会でのハイブリッド会議 設計・運用</div>
+    <div class="histories_item_content">某集会でのハイブリッド会議配信 設計・運用</div>
     <div class="histories_item_date">2024.07.某日</div>
   </li>
   <li>
@@ -108,7 +108,7 @@ date: 2024-01-24T12:00:00+9
     <div class="histories_item_date">2024.11.02</div>
   </li>
   <li>
-    <div class="histories_item_content">某集会でのハイブリッド会議 設計・運用</div>
+    <div class="histories_item_content">某集会でのハイブリッド会議配信 設計・運用</div>
     <div class="histories_item_date">2024.12.某日</div>
   </li>
   <li>
@@ -131,7 +131,7 @@ date: 2024-01-24T12:00:00+9
     <div class="histories_item_date">2025.07.12 - 13</div>
   </li>
   <li>
-    <div class="histories_item_content">某集会でのハイブリッド会議 設計・運用</div>
+    <div class="histories_item_content">某集会でのハイブリッド会議配信 設計・運用</div>
     <div class="histories_item_date">2025.07.某日</div>
   </li>
   <li>
@@ -144,7 +144,7 @@ date: 2024-01-24T12:00:00+9
     <div class="histories_item_date">2025.10.31</div>
   </li>
   <li>
-    <div class="histories_item_content">某集会でのハイブリッド会議 設計・運用</div>
+    <div class="histories_item_content">某集会でのハイブリッド会議配信 設計・運用</div>
     <div class="histories_item_date">2025.12.某日</div>
   </li>
   <li>
