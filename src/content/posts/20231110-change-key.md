@@ -3,6 +3,7 @@ date: 2023-11-10T12:00:00+9
 title: 'Key Transition Statement'
 description: '鍵を更新しました。'
 showList: true
+thumbnailURL: '/assets/brand-card.jpg'
 ---
 
 鍵を更新しました。

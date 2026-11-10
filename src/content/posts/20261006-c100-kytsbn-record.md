@@ -3,6 +3,7 @@ date: 2026-10-06T12:00:00+9
 title: '「小春六花はヨーグルトが食べたい」「しおばな祭」開催記録＋後日談記 (C100 発行)'
 description: 'コハタベ１・第一回しおばな祭の開催記録や後日談を記した本の本文を無料公開します。'
 showList: true
+thumbnailURL: '/assets/brand-card.jpg'
 ---
 
 
