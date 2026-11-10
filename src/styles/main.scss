@@ -36,14 +36,14 @@ p {
 }
 
 ul, ol {
-  margin-left: 40px;
+  margin-left: 2em;
   
   ul {
-    margin-left: 20px;
+    margin-left: 2em;
   }
 
   li {
-    margin-bottom: 5px;
+    line-height: 2em;
     &:last-child {
       margin-bottom: 0;
     }
@@ -54,24 +54,27 @@ ul p {
   margin-bottom: 0;
 }
 
-h1 { font-size: 2em; }
+h1 { font-size: 1.5em; }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
 h2, h3, h4, h5, h6 {
   color: var(--primary-brand-color);
 }
 
 h2 {
-  font-size: 1.8em;
+  font-size: 1.25em;
   border-bottom: 2px solid var(--border-color);
   padding-bottom: 8px;
 }
 h3 {
-  font-size: 1.6em;
-  border-left: 8px solid var(--border-color);
-  padding-left: 8px;
+  font-size: 1em;
+  border-bottom: 1px dotted var(--border-color);
+  padding-bottom: 8px;
 }
-h4 { font-size: 1.4em; }
-h5 { font-size: 1.2em; }
-h6 { font-size: 1em; }
+h4 { font-size: 1.2em; }
+h5 { font-size: 1.1em; }
+h6 { font-size: 0em; }
 
 img, iframe {
   max-width: 100%;
