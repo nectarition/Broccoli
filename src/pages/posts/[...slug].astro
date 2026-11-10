@@ -9,7 +9,7 @@ import PostNavigator from "../../components/PostNavigator.astro";
 export const getStaticPaths = async () => {
   const posts = await getCollection("posts");
   const sortedPosts = posts.sort(
-    (a, b) => b.data.date.getTime() - a.data.date.getTime()
+    (a, b) => b.data.date.getTime() - a.data.date.getTime(),
   );
   const postCount = sortedPosts.length;
 
@@ -29,7 +29,7 @@ const { Content } = await render(page);
 
 <BaseLayout
   title={page.data.title}
-  thumbnailPath={`/posts/${page.id}.png`}
+  thumbnailPath={page.data.thumbnailURL ?? `/posts/${page.id}.png`}
   description={page.data.description}
 >
   <Thumbnail src={`/posts/${page.id}.png`} />

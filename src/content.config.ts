@@ -6,7 +6,8 @@ const baseProps = {
   title: z.string(),
   description: z.string(),
   date: z.date(),
-  showList: z.boolean().optional()
+  showList: z.boolean().optional(),
+  thumbnailURL: z.string().optional()
 }
 
 const posts = defineCollection({
